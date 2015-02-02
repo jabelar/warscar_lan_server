@@ -1,4 +1,10 @@
-// intended to be called in the Create event of every object
+/// scrConstants()
+
+scrNetworkingConstants()
+scrGameConstants()
+
+// intended to be called in the Create event of controller object
+
 // input types
 globalvar TANK_KEYBOARD, TANK_JOYSTICK_PAIR, TANK_JOYSTICK_SING, TANK_JOYSTICK_DIR, TANK_TOUCH ;
 TANK_KEYBOARD = 0
@@ -21,11 +27,13 @@ globalvar NORMAL, CRITICAL, DYING ;
 NORMAL = 0
 CRITICAL = 1
 DYING = 2
+
 // game types
 globalvar VERSUS, CAPTURE_THE_FLAG ;
 VERSUS = 0
 CAPTURE_THE_FLAG = 1
-global.game_type = CAPTURE_THE_FLAG
+
+
 // players
 globalvar PLAYER1, PLAYER2 ;
 PLAYER1 = 0

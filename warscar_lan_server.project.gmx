@@ -185,13 +185,6 @@
       <script>scripts\scrPopulateItems.gml</script>
       <script>scripts\scrPopulateBuildings.gml</script>
       <script>scripts\scrFindFreeSpace.gml</script>
-      <scripts name="Map Creation">
-        <script>scripts\scrCreateRoom.gml</script>
-        <script>scripts\scrGenerateWater.gml</script>
-        <script>scripts\scrGenerateMud.gml</script>
-        <script>scripts\scrCleanUpSand.gml</script>
-        <script>scripts\scrCleanUpWaterShallow.gml</script>
-      </scripts>
       <scripts name="Display Management">
         <script>scripts\scrSetApplicationSurfaceSize.gml</script>
         <script>scripts\scrButtonDrawEvent.gml</script>
@@ -240,6 +233,7 @@
       <script>scripts\scrControllerStepEvent_new.gml</script>
     </scripts>
     <scripts name="Utilities">
+      <script>scripts\scrCheckCollisions.gml</script>
       <script>scripts\scrShowPlayerArray.gml</script>
       <script>scripts\scrNextOpenPlayerID.gml</script>
       <script>scripts\scrShowMapContents.gml</script>
@@ -264,11 +258,11 @@
         <script>scripts\scrInitializeSockets.gml</script>
         <script>scripts\scrInitializeNetworkGameVariables.gml</script>
         <script>scripts\scrNetworkingConstants.gml</script>
+        <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
       </scripts>
       <scripts name="Drawing">
         <script>scripts\scrDrawHUD.gml</script>
       </scripts>
-      <script>scripts\scrCheckCollisions.gml</script>
     </scripts>
     <script>scripts\scrGetNumPlayers.gml</script>
     <script>scripts\scrGetPlayerFromInstance.gml</script>
@@ -335,32 +329,9 @@
     <objects name="Obstacles">
       <object>objects\objObstacleWall1</object>
       <objects name="WaterDeep">
-        <object>objects\objWaterDeep</object>
         <object>objects\objWaterBigLake2Left</object>
         <object>objects\objWaterBigLake2Right</object>
         <object>objects\objWaterBigLake3</object>
-        <objects name="InsideCorners">
-          <object>objects\objWaterDeepTR</object>
-          <object>objects\objWaterDeepTL</object>
-          <object>objects\objWaterDeepBR</object>
-          <object>objects\objWaterDeepBL</object>
-        </objects>
-        <objects name="OutsideCorners">
-          <object>objects\objWaterDeepCornerTR</object>
-          <object>objects\objWaterDeepCornerTL</object>
-          <object>objects\objWaterDeepCornerBL</object>
-          <object>objects\objWaterDeepCornerBR</object>
-        </objects>
-        <objects name="Points">
-          <object>objects\objWaterDeepPointUp</object>
-          <object>objects\objWaterDeepPointRight</object>
-        </objects>
-        <objects name="Edges">
-          <object>objects\objWaterDeepEdgeRight</object>
-          <object>objects\objWaterDeepEdgeTop</object>
-          <object>objects\objWaterDeepEdgeLeft</object>
-          <object>objects\objWaterDeepEdgeBottom</object>
-        </objects>
       </objects>
       <objects name="Buildings">
         <object>objects\objBuilding1</object>

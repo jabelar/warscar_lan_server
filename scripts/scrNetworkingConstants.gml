@@ -20,3 +20,5 @@ NF_CLIENT_ANNOUNCE = 1
 // packet types from client
 globalvar NF_INPUT;
 NF_INPUT = 0
+
+scrNetworkingGameSpecificConstants() 
