@@ -1,4 +1,4 @@
-if room == room0
+if room == roomMain
 {
     obj_instances_number[OBSTACLE] = 0
     obj_instances_number[FLAG] = 0

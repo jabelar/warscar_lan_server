@@ -1,14 +1,17 @@
 switch room
 {
-    case roomLobby:
+    case roomMenu:
     {
-        scrDrawServerStatus()
         break;
     }
-    case room0:
+    case roomMain:
     {
         scrDrawHUD()
         // scrDrawServerStatus()
+        break;
+    }
+    default:
+    {
         break;
     }
 }

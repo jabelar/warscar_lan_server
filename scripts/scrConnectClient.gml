@@ -8,7 +8,7 @@ ds_map_replace(global.client_socket_map, open_slot, added_socket_id)
 ds_map_replace(global.socket_client_map, added_socket_id, open_slot)
 // scrShowMapContents(global.socket_client_map)
 
-if room != roomLobby // already in game
+if room != roomMenu // already in game
 {
     global.player_object[open_slot] = instance_create(irandom(room_width), irandom(room_height), objPlayer)
     with global.player_object[open_slot] // find free random location

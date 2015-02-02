@@ -1,6 +1,8 @@
 show_debug_message("scrControllerCreateEvent started")
 
 scrConstants() 
+scrInitializeNetworkGameVariables()
+scrInitializeNetworking()
 
 global.num_human_players = 1
 

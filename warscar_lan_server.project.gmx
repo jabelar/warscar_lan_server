@@ -174,14 +174,14 @@
         <script>scripts\scrClearInput.gml</script>
       </scripts>
       <scripts name="Initialization">
-        <script>scripts\scrInitializeNetworking.gml</script>
         <script>scripts\scrGameConstants.gml</script>
+        <script>scripts\scrNetworkingConstants.gml</script>
+        <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
+        <script>scripts\scrInitializeNetworking.gml</script>
         <script>scripts\scrInitializeMaps.gml</script>
         <script>scripts\scrInitializeBuffers.gml</script>
         <script>scripts\scrInitializeSockets.gml</script>
         <script>scripts\scrInitializeNetworkGameVariables.gml</script>
-        <script>scripts\scrNetworkingConstants.gml</script>
-        <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
       </scripts>
       <scripts name="Drawing">
         <script>scripts\scrDrawHUD.gml</script>
@@ -250,7 +250,6 @@
       <object>objects\objPlayer2</object>
     </objects>
     <objects name="Obstacles">
-      <object>objects\objObstacleWall1</object>
       <objects name="WaterDeep">
         <object>objects\objWaterBigLake2Left</object>
         <object>objects\objWaterBigLake2Right</object>
