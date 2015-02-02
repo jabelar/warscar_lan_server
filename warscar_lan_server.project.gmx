@@ -231,6 +231,71 @@
       <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
       <script>scripts\scrButtonPointsStepEvent.gml</script>
     </scripts>
+    <scripts name="Events">
+      <script>scripts\scrNetworkingEvent.gml</script>
+      <script>scripts\scrControllerBackspace.gml</script>
+      <script>scripts\scrControllerCreateEvent_new.gml</script>
+      <script>scripts\scrControllerDrawEvent_new.gml</script>
+      <script>scripts\scrControllerRoomStartEvent_new.gml</script>
+      <script>scripts\scrControllerStepEvent_new.gml</script>
+    </scripts>
+    <scripts name="Utilities">
+      <script>scripts\scrShowPlayerArray.gml</script>
+      <script>scripts\scrNextOpenPlayerID.gml</script>
+      <script>scripts\scrShowMapContents.gml</script>
+      <scripts name="Setters">
+        <script>scripts\scrSetScore.gml</script>
+        <script>scripts\scrSetHealth.gml</script>
+        <script>scripts\scrSetAmmo.gml</script>
+        <script>scripts\scrIncrementScore.gml</script>
+        <script>scripts\scrDecrementHealth.gml</script>
+        <script>scripts\scrDecrementAmmo.gml</script>
+      </scripts>
+      <scripts name="Input">
+        <script>scripts\scrProcessInputPrevious.gml</script>
+        <script>scripts\scrProcessInputNew.gml</script>
+        <script>scripts\scrClearInput.gml</script>
+      </scripts>
+      <scripts name="Initialization">
+        <script>scripts\scrInitializeNetworking.gml</script>
+        <script>scripts\scrGameConstants.gml</script>
+        <script>scripts\scrInitializeMaps.gml</script>
+        <script>scripts\scrInitializeBuffers.gml</script>
+        <script>scripts\scrInitializeSockets.gml</script>
+        <script>scripts\scrInitializeNetworkGameVariables.gml</script>
+        <script>scripts\scrNetworkingConstants.gml</script>
+      </scripts>
+      <scripts name="Drawing">
+        <script>scripts\scrDrawHUD.gml</script>
+      </scripts>
+      <script>scripts\scrCheckCollisions.gml</script>
+    </scripts>
+    <script>scripts\scrGetNumPlayers.gml</script>
+    <script>scripts\scrGetPlayerFromInstance.gml</script>
+    <scripts name="Networking">
+      <scripts name="Receive Packets">
+        <script>scripts\scrReceivedUDPPacket.gml</script>
+        <script>scripts\scrReceivedDataPacket.gml</script>
+        <script>scripts\scrConnectClient.gml</script>
+        <script>scripts\scrClientDisconnected.gml</script>
+      </scripts>
+      <scripts name="Transmit Packets">
+        <script>scripts\scrSendCreateAll.gml</script>
+        <script>scripts\scrSendServerBroadcast.gml</script>
+        <script>scripts\scrSendPlaySound.gml</script>
+        <script>scripts\scrSendPacketToSocket.gml</script>
+        <script>scripts\scrSendPacketToPlayer.gml</script>
+        <script>scripts\scrSendPacketToAll.gml</script>
+        <script>scripts\scrSendObjectUpdate.gml</script>
+        <script>scripts\scrSendLocalInput.gml</script>
+        <script>scripts\scrSendKickToSocket.gml</script>
+        <script>scripts\scrSendHUD.gml</script>
+        <script>scripts\scrSendCreateObject.gml</script>
+        <script>scripts\scrSendCreateEffect.gml</script>
+        <script>scripts\scrDestroyObject.gml</script>
+      </scripts>
+      <script>scripts\scrNetworkConnect.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontMilitary</font>
