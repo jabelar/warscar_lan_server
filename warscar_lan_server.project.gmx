@@ -31,40 +31,10 @@
       <sprite>sprites\sprObstacleWall1</sprite>
       <sprite>sprites\sprTower</sprite>
       <sprites name="WaterDeep">
-        <sprite>sprites\sprWaterDeep</sprite>
-        <sprites name="InsideCorners">
-          <sprite>sprites\sprWaterDeepBL</sprite>
-          <sprite>sprites\sprWaterDeepBR</sprite>
-          <sprite>sprites\sprWaterDeepTL</sprite>
-          <sprite>sprites\sprWaterDeepTR</sprite>
-        </sprites>
-        <sprites name="OutsideCorners">
-          <sprite>sprites\sprWaterDeepCornerTR</sprite>
-          <sprite>sprites\sprWaterDeepCornerTL</sprite>
-          <sprite>sprites\sprWaterDeepCornerBL</sprite>
-          <sprite>sprites\sprWaterDeepCornerBR</sprite>
-        </sprites>
-        <sprites name="Points">
-          <sprite>sprites\sprWaterDeepPointUp</sprite>
-          <sprite>sprites\sprWaterDeepPointRight</sprite>
-        </sprites>
-        <sprites name="Edges">
-          <sprite>sprites\sprWaterDeepEdgeRight0</sprite>
-          <sprite>sprites\sprWaterDeepEdgeRight1</sprite>
-          <sprite>sprites\sprWaterDeepEdgeRight2</sprite>
-          <sprite>sprites\sprWaterDeepEdgeRight3</sprite>
-          <sprite>sprites\sprWaterDeepEdgeTop0</sprite>
-          <sprite>sprites\sprWaterDeepEdgeBottom1</sprite>
-          <sprite>sprites\sprWaterDeepEdgeLeft0</sprite>
-          <sprite>sprites\sprWaterDeepEdgeTop1</sprite>
-          <sprite>sprites\sprWaterDeepEdgeBottom0</sprite>
-          <sprite>sprites\sprWaterDeepEdgeLeft1</sprite>
-        </sprites>
         <sprite>sprites\sprBigLake2Left</sprite>
         <sprite>sprites\sprBigLake2Right</sprite>
         <sprite>sprites\sprBigLake3</sprite>
       </sprites>
-      <sprite>sprites\sprMap1Obstacles</sprite>
       <sprites name="Buildings">
         <sprite>sprites\sprBuilding1</sprite>
         <sprite>sprites\sprBuilding2</sprite>
@@ -82,57 +52,10 @@
     <sprites name="Terrain">
       <sprite>sprites\sprTracks</sprite>
       <sprite>sprites\sprTracksNarrow</sprite>
-      <sprite>sprites\sprRoadPaved</sprite>
-      <sprite>sprites\sprRoadDirt</sprite>
-      <sprites name="Mud">
-        <sprite>sprites\sprMud</sprite>
-        <sprites name="Inside Corners">
-          <sprite>sprites\sprMudBR</sprite>
-          <sprite>sprites\sprMudTL</sprite>
-          <sprite>sprites\sprMudTR</sprite>
-          <sprite>sprites\sprMudBL</sprite>
-        </sprites>
-        <sprites name="Outside Corners">
-          <sprite>sprites\sprMudCornerTR</sprite>
-          <sprite>sprites\sprMudCornerTL</sprite>
-          <sprite>sprites\sprMudCornerBR</sprite>
-          <sprite>sprites\sprMudCornerBL</sprite>
-        </sprites>
-        <sprites name="Points">
-          <sprite>sprites\sprMudPointUp</sprite>
-          <sprite>sprites\sprMudPointRight</sprite>
-        </sprites>
-        <sprites name="Edges">
-          <sprite>sprites\sprMudEdgeRight</sprite>
-          <sprite>sprites\sprMudEdgeLeft</sprite>
-          <sprite>sprites\sprMudEdgeTop</sprite>
-          <sprite>sprites\sprMudEdgeBottom</sprite>
-        </sprites>
-      </sprites>
       <sprites name="Sand">
-        <sprite>sprites\sprSand</sprite>
-        <sprite>sprites\sprSandCornerTR</sprite>
-        <sprite>sprites\sprSandCornerTL</sprite>
-        <sprite>sprites\sprSandCornerBL</sprite>
-        <sprite>sprites\sprSandCornerBR</sprite>
-        <sprite>sprites\sprSandTR</sprite>
-        <sprite>sprites\sprSandTL</sprite>
-        <sprite>sprites\sprSandBL</sprite>
-        <sprite>sprites\sprSandBR</sprite>
         <sprite>sprites\sprSandBigLake2Left</sprite>
         <sprite>sprites\sprSandBigLake2Right</sprite>
         <sprite>sprites\sprBigLake3Sand</sprite>
-      </sprites>
-      <sprites name="Shallow Water">
-        <sprite>sprites\sprWaterShallow</sprite>
-        <sprite>sprites\sprWaterShallowCornerTR</sprite>
-        <sprite>sprites\sprWaterShallowCornerTL</sprite>
-        <sprite>sprites\sprWaterShallowCornerBL</sprite>
-        <sprite>sprites\sprWaterShallowCornerBR</sprite>
-        <sprite>sprites\sprWaterShallowTR</sprite>
-        <sprite>sprites\sprWaterShallowTL</sprite>
-        <sprite>sprites\sprWaterShallowBL</sprite>
-        <sprite>sprites\sprWaterShallowBR</sprite>
       </sprites>
     </sprites>
     <sprites name="Flags">
@@ -350,57 +273,10 @@
     <object>objects\objRespawnMarker</object>
     <objects name="Terrain">
       <object>objects\objTracks</object>
-      <objects name="Hindrances">
-        <objects name="Mud">
-          <object>objects\objMud</object>
-          <objects name="Inside Corners">
-            <object>objects\objMudTR</object>
-            <object>objects\objMudBL</object>
-            <object>objects\objMudBR</object>
-            <object>objects\objMudTL</object>
-          </objects>
-          <objects name="Outside Corners">
-            <object>objects\objMudCornerTR</object>
-            <object>objects\objMudCornerTL</object>
-            <object>objects\objMudCornerBR</object>
-            <object>objects\objMudCornerBL</object>
-          </objects>
-          <objects name="Points">
-            <object>objects\objMudPointRight</object>
-            <object>objects\objMudPointUp</object>
-          </objects>
-          <objects name="Edges">
-            <object>objects\objMudEdgeRight</object>
-            <object>objects\objMudEdgeTop</object>
-            <object>objects\objMudEdgeBottom</object>
-            <object>objects\objMudEdgeLeft</object>
-          </objects>
-        </objects>
-        <objects name="Water Shallow">
-          <object>objects\objWaterShallow</object>
-          <object>objects\objWaterShallowTR</object>
-          <object>objects\objWaterShallowTL</object>
-          <object>objects\objWaterShallowBL</object>
-          <object>objects\objWaterShallowBR</object>
-          <object>objects\objWaterShallowCornerTR</object>
-          <object>objects\objWaterShallowCornerTL</object>
-          <object>objects\objWaterShallowCornerBL</object>
-          <object>objects\objWaterShallowCornerBR</object>
-        </objects>
-      </objects>
       <objects name="Sand">
-        <object>objects\objSand</object>
         <object>objects\objSandBigLake2Left</object>
         <object>objects\objSandBigLake2Right</object>
         <object>objects\objBigLake3Sand</object>
-        <object>objects\objSandTR</object>
-        <object>objects\objSandTL</object>
-        <object>objects\objSandBL</object>
-        <object>objects\objSandBR</object>
-        <object>objects\objSandCornerTR</object>
-        <object>objects\objSandCornerTL</object>
-        <object>objects\objSandCornerBL</object>
-        <object>objects\objSandCornerBR</object>
       </objects>
     </objects>
     <objects name="Flags">
