@@ -96,26 +96,30 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Controller">
-      <script>scripts\scrConstants.gml</script>
+    <scripts name="Display Management">
+      <script>scripts\scrSetApplicationSurfaceSize.gml</script>
+      <script>scripts\scrButtonDrawEvent.gml</script>
+    </scripts>
+    <scripts name="Events">
       <script>scripts\scrControllerCreateEvent.gml</script>
+      <script>scripts\scrControllerBackspace.gml</script>
       <script>scripts\scrControllerStepEvent.gml</script>
+      <script>scripts\scrMainMenuStepEvent.gml</script>
+      <script>scripts\scrGameStepEvent.gml</script>
       <script>scripts\scrControllerDrawEvent.gml</script>
-      <script>scripts\scrControllerDrawGui.gml</script>
+      <script>scripts\scrControllerDrawEvent_new.gml</script>
+      <script>scripts\scrControllerRoomStartEvent_new.gml</script>
+      <script>scripts\scrControllerStepEvent_new.gml</script>
       <script>scripts\scrControllerRoomStartEvent.gml</script>
+      <script>scripts\scrControllerDrawGui.gml</script>
       <script>scripts\scrMap1RoomStart.gml</script>
       <script>scripts\scrComputerPathInit.gml</script>
       <script>scripts\scrPopulateItems.gml</script>
+      <script>scripts\scrNetworkingEvent.gml</script>
       <script>scripts\scrPopulateBuildings.gml</script>
-      <script>scripts\scrFindFreeSpace.gml</script>
-      <scripts name="Display Management">
-        <script>scripts\scrSetApplicationSurfaceSize.gml</script>
-        <script>scripts\scrButtonDrawEvent.gml</script>
-      </scripts>
-      <script>scripts\scrMainMenuStepEvent.gml</script>
+      <script>scripts\scrHindranceParentCreateEvent.gml</script>
       <script>scripts\scrMenuRoomStartEvent.gml</script>
     </scripts>
-    <script>scripts\scrHindranceParentCreateEvent.gml</script>
     <scripts name="Players">
       <script>scripts\scrProcessInput.gml</script>
       <script>scripts\scrInputClear.gml</script>
@@ -140,26 +144,24 @@
       </scripts>
     </scripts>
     <scripts name="Menu">
-      <script>scripts\scrMenuCursorStepEvent.gml</script>
       <script>scripts\scrMenuCursorCreateEvent.gml</script>
+      <script>scripts\scrMenuCursorStepEvent.gml</script>
       <script>scripts\scrButtonInputPlayer1StepEvent.gml</script>
       <script>scripts\scrButtonInputPlayer2StepEvent.gml</script>
       <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
       <script>scripts\scrButtonPointsStepEvent.gml</script>
     </scripts>
-    <scripts name="Events">
-      <script>scripts\scrNetworkingEvent.gml</script>
-      <script>scripts\scrControllerBackspace.gml</script>
-      <script>scripts\scrControllerCreateEvent_new.gml</script>
-      <script>scripts\scrControllerDrawEvent_new.gml</script>
-      <script>scripts\scrControllerRoomStartEvent_new.gml</script>
-      <script>scripts\scrControllerStepEvent_new.gml</script>
-    </scripts>
     <scripts name="Utilities">
-      <script>scripts\scrCheckCollisions.gml</script>
-      <script>scripts\scrShowPlayerArray.gml</script>
-      <script>scripts\scrNextOpenPlayerID.gml</script>
-      <script>scripts\scrShowMapContents.gml</script>
+      <scripts name="Misc">
+        <script>scripts\scrCheckCollisions.gml</script>
+        <script>scripts\scrNextOpenPlayerID.gml</script>
+        <script>scripts\scrGetPlayerFromInstance.gml</script>
+        <script>scripts\scrShowPlayerArray.gml</script>
+        <script>scripts\scrFindFreeSpace.gml</script>
+        <script>scripts\scrDeactivateObjectsOutsideView.gml</script>
+        <script>scripts\scrShowMapContents.gml</script>
+        <script>scripts\scrGetNumPlayers.gml</script>
+      </scripts>
       <scripts name="Setters">
         <script>scripts\scrSetScore.gml</script>
         <script>scripts\scrSetHealth.gml</script>
@@ -174,6 +176,7 @@
         <script>scripts\scrClearInput.gml</script>
       </scripts>
       <scripts name="Initialization">
+        <script>scripts\scrConstants.gml</script>
         <script>scripts\scrGameConstants.gml</script>
         <script>scripts\scrNetworkingConstants.gml</script>
         <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
@@ -182,13 +185,12 @@
         <script>scripts\scrInitializeBuffers.gml</script>
         <script>scripts\scrInitializeSockets.gml</script>
         <script>scripts\scrInitializeNetworkGameVariables.gml</script>
+        <script>scripts\scrInitializeGameVariables.gml</script>
       </scripts>
       <scripts name="Drawing">
         <script>scripts\scrDrawHUD.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\scrGetNumPlayers.gml</script>
-    <script>scripts\scrGetPlayerFromInstance.gml</script>
     <scripts name="Networking">
       <scripts name="Receive Packets">
         <script>scripts\scrReceivedUDPPacket.gml</script>

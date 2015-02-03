@@ -1,9 +1,9 @@
 /// scrInitializeNetworkGameVariables()
 
-global.max_num_players = 4
+global.max_num_players = 2
 global.min_num_players = 2
-global.wait_for_full_lobby = false
-global.allow_join_ingame = true
+global.wait_for_full_lobby = true
+global.allow_join_ingame = false
 
 randomize()
 

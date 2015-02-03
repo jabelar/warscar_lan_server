@@ -1,4 +1,4 @@
-/// scrGameContstants()
+/// scrGameConstants()
 
 // intended to be called in the Create event of controller object
 
