@@ -14,4 +14,4 @@ scrPopulateBuildings()
 
 scrPopulateItems()
 
-if objPlayer2.player_type == COMPUTER then scrComputerPathInit()
+scrSendCreateAll()

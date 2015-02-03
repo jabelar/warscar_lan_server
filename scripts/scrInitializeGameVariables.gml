@@ -15,4 +15,3 @@ global.game_type = CAPTURE_THE_FLAG
 global.points_to_win = 1
 
 global.music_level = 1.0
-

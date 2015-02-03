@@ -113,7 +113,6 @@
       <script>scripts\scrControllerRoomStartEvent.gml</script>
       <script>scripts\scrControllerDrawGui.gml</script>
       <script>scripts\scrMap1RoomStart.gml</script>
-      <script>scripts\scrComputerPathInit.gml</script>
       <script>scripts\scrPopulateItems.gml</script>
       <script>scripts\scrNetworkingEvent.gml</script>
       <script>scripts\scrPopulateBuildings.gml</script>
@@ -194,8 +193,8 @@
     </scripts>
     <scripts name="Networking">
       <scripts name="Receive Packets">
-        <script>scripts\scrReceivedUDPPacket.gml</script>
-        <script>scripts\scrReceivedDataPacket.gml</script>
+        <script>scripts\scrProcessReceivedUDP.gml</script>
+        <script>scripts\scrProcessReceivedTCP.gml</script>
         <script>scripts\scrConnectClient.gml</script>
         <script>scripts\scrClientDisconnected.gml</script>
       </scripts>
@@ -275,11 +274,6 @@
     <object>objects\objRespawnMarker</object>
     <objects name="Terrain">
       <object>objects\objTracks</object>
-      <objects name="Sand">
-        <object>objects\objSandBigLake2Left</object>
-        <object>objects\objSandBigLake2Right</object>
-        <object>objects\objBigLake3Sand</object>
-      </objects>
     </objects>
     <objects name="Flags">
       <object>objects\objFlagRed</object>
@@ -301,6 +295,13 @@
       <object>objects\objButtonPlayers</object>
       <object>objects\objButtonGameType</object>
       <object>objects\objButtonMusicLevel</object>
+    </objects>
+    <objects name="Hindrances">
+      <objects name="Sand">
+        <object>objects\objSandBigLake2Left</object>
+        <object>objects\objSandBigLake2Right</object>
+        <object>objects\objSandBigLake3</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

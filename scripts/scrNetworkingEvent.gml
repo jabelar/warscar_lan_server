@@ -28,11 +28,11 @@ else // network_event_type == network_type_data
     {
         if socket_id == global.socket_server_udp // received UDP broadcast packet
         {
-            scrReceivedUDPPacket(rx_buff, ip_addr_rx)
+            scrProcessReceivedUDP(rx_buff, ip_addr_rx)
         }
         else // received TCP data packet
         {
-            scrReceivedDataPacket(rx_buff, socket_id)
+            scrProcessReceivedTCP(rx_buff, socket_id)
         }
     }
 }
