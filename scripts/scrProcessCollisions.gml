@@ -3,11 +3,10 @@ if item_id > 0 // hit item
 {
     my_health += 20
     if my_health > 100 then my_health = 100
-    audio_play_sound(sndItem, 1, false)
-    with (item_id)
-    {
-        instance_destroy()
-    }
+    audio_play_sound_at(sndItem, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+    scrSendPlaySound(SOUND_ITEM, x, y)
+    scrDestroyObject(item_id)
+
     // respawn in random location
     new_item_id = instance_create(random(room_width), random(room_height), objItemHealth)
     // make sure in free location
@@ -19,18 +18,18 @@ if item_id > 0 // hit item
             y = random(room_height)
         }
     }
+    scrSendCreateObject(HEALTH, new_item_id)
 }
 
 item_id = instance_place(x, y, objItemAmmo)
 if item_id > 0 // hit item
 {
     global.ammo_main_gun[current_player] += 10
-    audio_play_sound(sndItem, 1, false)
-    with (item_id)
-    {
-        instance_destroy()
-    }
-      // respawn in random location
+    audio_play_sound_at(sndItem, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+    scrSendPlaySound(SOUND_ITEM, x, y)
+    scrDestroyObject(item_id)
+
+    // respawn in random location
     new_item_id = instance_create(random(room_width), random(room_height), objItemAmmo)
     // make sure in free location
     with (new_item_id)
@@ -41,6 +40,7 @@ if item_id > 0 // hit item
             y = random(room_height)
         }
     }
+    scrSendCreateObject(AMMO, new_item_id)
 }
 
 // figure out which flag is which
@@ -64,7 +64,8 @@ if flag_id > 0 // hit enemy flag
         case FLAG_HOME:
         {
             // pick it up
-            audio_play_sound(sndFlag, 1, false)
+            audio_play_sound_at(sndFlag, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+            scrSendPlaySound(SOUND_FLAG, x, y)
             flag_id.state = FLAG_CAPTURED
             have_enemy_flag = true
             flag_id.carrier = id
@@ -78,7 +79,8 @@ if flag_id > 0 // hit enemy flag
         case FLAG_ABANDONED:
         {
             // pick it up
-            audio_play_sound(sndFlag, 1, false)
+            audio_play_sound_at(sndFlag, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+            scrSendPlaySound(SOUND_FLAG, x, y)
             flag_id.state = FLAG_CAPTURED
             have_enemy_flag = true
             flag_id.carrier = id
@@ -98,10 +100,7 @@ if hazard_id > 0 // hit hazard
     state = DYING
     if hazard_id.object_index = objLandMine
     {
-        with (hazard_id)
-        {
-            instance_destroy()
-        }
+        scrDestroyObject(hazard_id)
     }
 }
 
@@ -120,7 +119,8 @@ if base_id > 0 // hit home base
                 if state = FLAG_CAPTURED
                 {
                     global.player_score[other.current_player] += 1
-                    audio_play_sound(sndFanfare, 1, false)
+                    audio_play_sound_at(sndFanfare, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+                    scrSendPlaySound(SOUND_FANFARE, x, y)
                     state = FLAG_HOME
                     carrier = noone
                     other.have_enemy_flag = false

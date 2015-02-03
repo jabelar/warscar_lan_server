@@ -38,10 +38,12 @@ switch state
     case DYING:
     {
         effect_create_above(ef_explosion, x, y, 1, c_red)
-        marker_id = instance_create(xstart, ystart, objRespawnMarker)
+        scrSendCreateEffect(ef_explosion, x, y, 1, c_red)        marker_id = instance_create(xstart, ystart, objRespawnMarker)
         marker_id.respawn_index = object_index
-        audio_play_sound(sndExplosion, 1, false)
-        instance_destroy()
+        // don't need to send packet for created marker as markers aren't represented on client
+        audio_play_sound_at(sndExplosion, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
+        scrSendPlaySound(SOUND_EXPLOSION, x, y)
+        scrDestroyObject(id)
         break ;
     }   
 }

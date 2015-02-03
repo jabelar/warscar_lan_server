@@ -50,7 +50,8 @@ alarm[0] = my_duration
           <argument>
             <kind>1</kind>
             <string>// this controls the fade out of the tracks
-instance_destroy()
+scrDestroyObject(id)
+
 </string>
           </argument>
         </arguments>

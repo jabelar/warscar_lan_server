@@ -96,10 +96,7 @@ state = DYING
                obstacle_id.image_index += 1
                 if obstacle_id.image_index = obstacle_id.image_number
                 {
-                    with (obstacle_id)
-                    {
-                      instance_destroy()
-                    }
+                    scrDestroyObject(obstacle_id)
                 }
             }
         }
@@ -118,7 +115,8 @@ state = DYING
     case DYING:
     {
         effect_create_above(ef_explosion, x, y, 0, c_gray)
-        instance_destroy()
+        scrSendCreateEffect(ef_explosion, x, y, 0, c_gray)
+        scrDestroyObject(id)
         break ;
     }
 }

@@ -1,12 +1,12 @@
-///scrSendPlaySound(tx_buff)
-// argument0 is sound type constant
-// argument1 is sound x position
-// argument2 is sound y position
+///scrSendPlaySound(sound_type, x, y)
+var sound_type = argument[0]
+var sound_x = argument[1]
+var sound_y = argument[2]
 
 buffer_seek(global.tx_buff_server, buffer_seek_start, 0)
 buffer_write(global.tx_buff_server, buffer_u8, NF_SOUND_PLAY)
-buffer_write(global.tx_buff_server, buffer_u8, argument[0])
-buffer_write(global.tx_buff_server, buffer_u32, argument[1])
-buffer_write(global.tx_buff_server, buffer_u32, argument[2])
+buffer_write(global.tx_buff_server, buffer_u8, sound_type)
+buffer_write(global.tx_buff_server, buffer_u32, sound_x)
+buffer_write(global.tx_buff_server, buffer_u32, sound_y)
 
 scrSendPacketToAll(global.tx_buff_server)

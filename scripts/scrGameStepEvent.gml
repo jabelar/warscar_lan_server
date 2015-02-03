@@ -12,3 +12,4 @@ if global.player_score[1] >= global.points_to_win
     game_restart()
 }
 
+scrSendHUD()

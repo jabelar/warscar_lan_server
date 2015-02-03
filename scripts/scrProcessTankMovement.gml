@@ -27,6 +27,7 @@ else
         tracks_id = instance_create(x, y, objTracks) ;
         tracks_id.image_angle = image_angle ;
         image_speed = 2 ;
+        scrSendCreateObject(TRACKS, tracks_id)
     }
     
     if key_backward
@@ -35,6 +36,7 @@ else
         tracks_id = instance_create(x, y, objTracks) ;
         tracks_id.image_angle = image_angle ;
         image_speed = -1 ;
+        scrSendCreateObject(TRACKS, tracks_id)
     }
     
     if key_right

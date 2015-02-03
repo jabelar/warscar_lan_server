@@ -50,6 +50,7 @@
             <kind>1</kind>
             <string>instance_create(x, y, respawn_index) // assumes respawn_id set by creating object
 instance_destroy()
+// don't need to send destroy packet since markers aren't represented on client
 </string>
           </argument>
         </arguments>

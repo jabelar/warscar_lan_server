@@ -25,10 +25,7 @@ if client_socket > 0 // for some reason there can be disconnect from socket 0 (I
         show_debug_message("Destroying local object with id = "+string(global.player_object[client_id]))
         if global.player_object[client_id] > 0 // not sure why sometimes get this as 0, maybe in lobby
         {
-            with global.player_object[client_id]
-            {
-                instance_destroy()
-            }
+            scrDestroyObject(player_object[client_id])
         }
         else
         {
