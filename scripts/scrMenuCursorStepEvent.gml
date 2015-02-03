@@ -25,7 +25,7 @@ if key_weapon1_pressed
 }
 
 // process starting the game   
-if click_pressed and instance_position(x, y, objButtonPlay)
+if key_weapon1_pressed and instance_position(x, y, objButtonPlay)
 {
     room_goto(roomMain)
 }
