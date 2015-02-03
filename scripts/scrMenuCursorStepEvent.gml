@@ -3,8 +3,8 @@
 
 var button_id ;
 
-current_player = PLAYER1
-scrProcessInput()
+scrProcessInputCursor()
+
 if key_forward then y -=8
 if key_backward then y += 8
 if key_right then x += 8

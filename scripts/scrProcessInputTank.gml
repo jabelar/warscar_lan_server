@@ -1,7 +1,7 @@
 // tank movement input
 
-var joy_direction = point_direction(0, 0, gamepad_axis_value(contrl_num, gp_axislh), gamepad_axis_value(contrl_num, gp_axislv));
-var joy_distance = point_distance(0, 0, gamepad_axis_value(contrl_num, gp_axislh), gamepad_axis_value(contrl_num, gp_axislv));
+var joy_direction = point_direction(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
+var joy_distance = point_distance(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
 var ang_diff = angle_difference(joy_direction, image_angle)
     
 if joy_distance > 0.1

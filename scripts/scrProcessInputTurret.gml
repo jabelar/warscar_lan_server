@@ -1,7 +1,7 @@
 // turret movement input
 
-var joy_direction = point_direction(0, 0, gamepad_axis_value(contrl_num, gp_axisrh), gamepad_axis_value(contrl_num, gp_axisrv));
-var joy_distance = point_distance(0, 0, gamepad_axis_value(contrl_num, gp_axisrh), gamepad_axis_value(contrl_num, gp_axisrv));
+var joy_direction = point_direction(0, 0, gamepad_axis_value(1, gp_axisrh), gamepad_axis_value(1, gp_axisrv));
+var joy_distance = point_distance(0, 0, gamepad_axis_value(1, gp_axisrh), gamepad_axis_value(1, gp_axisrv));
 var ang_diff = angle_difference(joy_direction, image_angle+angle_main_gun)
 if joy_distance > 0.1
 {

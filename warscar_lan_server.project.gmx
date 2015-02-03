@@ -123,6 +123,7 @@
     <scripts name="Players">
       <script>scripts\scrProcessInput.gml</script>
       <script>scripts\scrInputClear.gml</script>
+      <script>scripts\scrProcessInputCursor.gml</script>
       <script>scripts\scrProcessInputTank.gml</script>
       <script>scripts\scrProcessInputTurret.gml</script>
       <script>scripts\scrProcessInputTriggers.gml</script>
