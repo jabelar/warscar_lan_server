@@ -29,11 +29,6 @@
 
 current_player = PLAYER2 // this is Player 2's object
 my_team = TEAM2
-input_style_tank = global.input_style_tank[current_player] 
-input_style_turret = global.input_style_turret[current_player]
-player_type = HUMAN 
-ai_target = ENEMY_FLAG 
-prev_ai_target = ai_target
 
 scrPlayerCreateEvent()
 </string>

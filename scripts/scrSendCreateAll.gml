@@ -9,8 +9,8 @@ with objBuilding3 { scrSendCreateObject(BUILDING_3, id) }
 with objBuilding4 { scrSendCreateObject(BUILDING_4, id) }
 with objLandMine { scrSendCreateObject(MINE, id) }
 with objProjectileShell { scrSendCreateObject(BULLET, id) }
-with objPlayer1 { scrSendCreateObject(PLAYER_1, id) }
-with objPlayer2 { scrSendCreateObject(PLAYER_2, id) }
+with objPlayer1 { scrSendCreateObject(PLAYER1, id) }
+with objPlayer2 { scrSendCreateObject(PLAYER2, id) }
 with objItemHealth { scrSendCreateObject(HEALTH, id) }
 with objItemAmmo { scrSendCreateObject(AMMO, id) }
 with objTracks { scrSendCreateObject(TRACKS, id) }

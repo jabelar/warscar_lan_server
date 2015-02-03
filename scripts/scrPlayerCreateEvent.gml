@@ -6,15 +6,8 @@ if current_player == PLAYER1
 else
 {
     body_sprite = sprHuskyBlue
-    if global.num_human_players == 1
-    {
-        player_type = COMPUTER
-    }
-    else
-    {
-        player_type = HUMAN
-    }
 }
+
 has_main_gun = true
 
 input_forward = vk_up
@@ -28,8 +21,6 @@ input_change_spawn = ord('S')
 input_flag = ord('F')
 
 scrInputClear()
-
-gamepad_set_axis_deadzone(1, 0.2);
 
 my_speed = TANK_SPEED_BASE
 my_turn_speed = TANK_TURN_SPEED_BASE
@@ -48,18 +39,4 @@ offset_distance_main_gun = 64
 have_enemy_flag = false
 have_own_flag = false
 
-// get AI alarm going if computer player type
-if player_type = COMPUTER
-{
-    alarm[1] = room_speed
-
-    // set pathfinding options
-    mp_potential_settings(30, 3, 10, false)
-    grid = mp_grid_create(0, 0, room_width/TILE_SIZE, room_height/TILE_SIZE, TILE_SIZE, TILE_SIZE)
-    path = path_add()
-    mp_grid_add_instances(grid, objParentObstacle, false) // Need to do this here for when player regenerates need to update
-    path_found = false
-    xpathstart = x
-    ypathstart = y
-}
 show_debug_message("scrPlayerCreateEvent finished")

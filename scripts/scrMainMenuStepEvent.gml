@@ -29,4 +29,3 @@ with objButtonPoints
 {
     scrButtonPointsStepEvent()
 }
-

@@ -43,108 +43,96 @@ if item_id > 0 // hit item
     }
 }
 
-switch global.game_type
+// figure out which flag is which
+if current_player = PLAYER1
 {
-    case VERSUS:
+    own_flag_id = objFlagRed.id
+    enemy_flag_id = objFlagBlue.id
+}
+else // player 2
+{
+    own_flag_id = objFlagBlue.id
+    enemy_flag_id = objFlagRed.id
+}
+       
+// check if hit enemy flag
+flag_id = instance_place(x, y, enemy_flag_id)
+if flag_id > 0 // hit enemy flag
+{
+    switch flag_id.state
     {
-        // do nothing
-        break ;
-    }
-    case CAPTURE_THE_FLAG:
-    {
-        // figure out which flag is which
-        if current_player = PLAYER1
+        case FLAG_HOME:
         {
-            own_flag_id = objFlagRed.id
-            enemy_flag_id = objFlagBlue.id
+            // pick it up
+            audio_play_sound(sndFlag, 1, false)
+            flag_id.state = FLAG_CAPTURED
+            have_enemy_flag = true
+            flag_id.carrier = id
+            break ;
         }
-        else // player 2
+        case FLAG_CAPTURED:
         {
-            own_flag_id = objFlagBlue.id
-            enemy_flag_id = objFlagRed.id
+            // do nothing
+            break ;
         }
-               
-        // check if hit enemy flag
-        flag_id = instance_place(x, y, enemy_flag_id)
-        if flag_id > 0 // hit enemy flag
+        case FLAG_ABANDONED:
         {
-            switch flag_id.state
-            {
-                case FLAG_HOME:
-                {
-                    // pick it up
-                    audio_play_sound(sndFlag, 1, false)
-                    flag_id.state = FLAG_CAPTURED
-                    have_enemy_flag = true
-                    flag_id.carrier = id
-                    break ;
-                }
-                case FLAG_CAPTURED:
-                {
-                    // do nothing
-                    break ;
-                }
-                case FLAG_ABANDONED:
-                {
-                    // pick it up
-                    audio_play_sound(sndFlag, 1, false)
-                    flag_id.state = FLAG_CAPTURED
-                    have_enemy_flag = true
-                    flag_id.carrier = id
-                    break ;
-                }
-                case FLAG_RETURNING:
-                {
-                    // do nothing
-                    break ;
-                }
-            }
+            // pick it up
+            audio_play_sound(sndFlag, 1, false)
+            flag_id.state = FLAG_CAPTURED
+            have_enemy_flag = true
+            flag_id.carrier = id
+            break ;
         }
-        
-        hazard_id = instance_place(x, y, objParentHazard)
-        if hazard_id > 0 // hit hazard
+        case FLAG_RETURNING:
         {
-            state = DYING
-            if hazard_id.object_index = objLandMine
-            {
-                with (hazard_id)
-                {
-                    instance_destroy()
-                }
-            }
+            // do nothing
+            break ;
         }
-        
-        base_id = instance_place(x, y, objParentBase)
-        if base_id > 0 // hit home base
-        {
-            // check if enemy or own base
-            if base_id.my_team = my_team // our own base
-            {
-                // deposit any returning or captured flag
-                with (objParentFlag)
-                {
-                    // check if being carried by this tank
-                    if carrier = other.id 
-                    {
-                        if state = FLAG_CAPTURED
-                        {
-                            global.player_score[other.current_player] += 1
-                            audio_play_sound(sndFanfare, 1, false)
-                            state = FLAG_HOME
-                            carrier = noone
-                            other.have_enemy_flag = false
-                            // return it to starting position
-                            x = xstart
-                            y = ystart
-                        }
-                    }
-                }
-            }
-            else // enemy base
-            {
-                // do nothing
-            }
-        }    
-        break ;
     }
 }
+
+hazard_id = instance_place(x, y, objParentHazard)
+if hazard_id > 0 // hit hazard
+{
+    state = DYING
+    if hazard_id.object_index = objLandMine
+    {
+        with (hazard_id)
+        {
+            instance_destroy()
+        }
+    }
+}
+
+base_id = instance_place(x, y, objParentBase)
+if base_id > 0 // hit home base
+{
+    // check if enemy or own base
+    if base_id.my_team = my_team // our own base
+    {
+        // deposit any returning or captured flag
+        with (objParentFlag)
+        {
+            // check if being carried by this tank
+            if carrier = other.id 
+            {
+                if state = FLAG_CAPTURED
+                {
+                    global.player_score[other.current_player] += 1
+                    audio_play_sound(sndFanfare, 1, false)
+                    state = FLAG_HOME
+                    carrier = noone
+                    other.have_enemy_flag = false
+                    // return it to starting position
+                    x = xstart
+                    y = ystart
+                }
+            }
+        }
+    }
+    else // enemy base
+    {
+        // do nothing
+    }
+}    

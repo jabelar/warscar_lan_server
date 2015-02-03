@@ -38,19 +38,6 @@ switch state
     case DYING:
     {
         effect_create_above(ef_explosion, x, y, 1, c_red)
-        switch global.game_type
-        {
-            case VERSUS:
-            {
-                if current_player = PLAYER1 then global.player_score[PLAYER2] += 1 else global.player_score[PLAYER1] += 1
-                break ;
-            }
-            case CAPTURE_THE_FLAG:
-            {
-                // do nothing
-                break ;
-            }
-        }
         marker_id = instance_create(xstart, ystart, objRespawnMarker)
         marker_id.respawn_index = object_index
         audio_play_sound(sndExplosion, 1, false)

@@ -1,7 +1,5 @@
 /// scrServerBroadcast()
 
-// broadcast server info
-
 // only broadcast when slots are free for players to join
 if scrGetNumPlayers() < global.max_num_players
 {

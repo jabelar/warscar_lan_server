@@ -103,45 +103,15 @@ state = DYING
                 }
             }
         }
+        
         // process hitting other player
-        switch global.game_type
+        var other_player
+        if my_player = PLAYER1 then other_player = objPlayer2 else other_player = objPlayer1
+        victim_id = collision_line(x, y, x+lengthdir_x(speed, direction), y+lengthdir_y(speed, direction), other_player, true, true)
+        if victim_id &gt; 0
         {
-            case VERSUS:
-            {
-                var other_player
-                if my_player = PLAYER1 then other_player = objPlayer2 else other_player = objPlayer1
-                victim_id = collision_line(x, y, x+lengthdir_x(speed, direction), y+lengthdir_y(speed, direction), other_player, true, true)
-                if victim_id &gt; 0
-                {
-                    victim_id.my_health -= my_damage
-                    state = DYING // destroy bullet
-                }
-                break ;
-            }
-            case CAPTURE_THE_FLAG:
-            {
-                var other_player
-                if my_player = PLAYER1 then other_player = objPlayer2 else other_player = objPlayer1
-                victim_id = collision_line(x, y, x+lengthdir_x(speed, direction), y+lengthdir_y(speed, direction), other_player, true, true)
-                if victim_id &gt; 0
-                {
-                    victim_id.my_health -= 50
-                    state = DYING // destroy bullet
-                }
-                break ;
-            }
-        }
-        // only count if in Versus game type
-        if global.game_type = VERSUS
-        {
-            var other_player
-            if my_player = PLAYER1 then other_player = objPlayer2 else other_player = objPlayer1
-            victim_id = collision_line(x, y, x+lengthdir_x(speed, direction), y+lengthdir_y(speed, direction), other_player, true, true)
-            if victim_id &gt; 0
-            {
-                victim_id.my_health -= my_damage
-                state = DYING // destroy bullet
-            }
+            victim_id.my_health -= my_damage
+            state = DYING // destroy bullet
         }
         break ;
     }
