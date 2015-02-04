@@ -59,6 +59,7 @@ image_speed = 30/room_speed
         // follow carrier
         x = carrier.x
         y = carrier.y
+        scrSendObjectUpdate(id)
     }
     else // carrier dead
     {

@@ -49,8 +49,8 @@ alarm[0] = my_duration
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// this controls the fade out of the tracks
-scrDestroyObject(id)
+            <string>instance_destroy()
+// do not need to send destroy object because have offloaded to client
 
 </string>
           </argument>
@@ -75,6 +75,8 @@ scrDestroyObject(id)
           <argument>
             <kind>1</kind>
             <string>image_alpha = 0.1* alarm[0] / my_duration
+
+// don't need to send object update because have offloaded this to client side
 </string>
           </argument>
         </arguments>
