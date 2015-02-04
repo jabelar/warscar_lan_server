@@ -11,5 +11,5 @@ for (var i=0; i<global.max_num_players; i++)
     buffer_write(global.tx_buff_server, buffer_u32, global.player_ammo[i])
 }
 
-show_debug_message("Sending HUD packet to all clients")
+// show_debug_message("Sending HUD packet to all clients")
 scrSendPacketToAll(global.tx_buff_server)

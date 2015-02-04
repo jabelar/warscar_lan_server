@@ -48,6 +48,6 @@ switch state
     }   
 }
 
-scrSendObjectUpdate(id)
+scrSendPlayerUpdate(id)
 
 // show_debug_message("scrProcessPlayerStep finished")

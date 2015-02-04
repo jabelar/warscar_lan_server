@@ -21,4 +21,3 @@ with objFlagRed { scrSendCreateObject(FLAG_RED, id) }
 with objFlagBlue { scrSendCreateObject(FLAG_BLUE, id) }
 with objHomeBaseTeam1 { scrSendCreateObject(HOME_BASE_RED, id) }
 with objHomeBaseTeam2 { scrSendCreateObject(HOME_BASE_BLUE, id) }
-

@@ -1,3 +1,5 @@
+/// scrControllerDrawEvent()
+
 draw_set_font(fontMilitaryStencil)
 switch room
 {

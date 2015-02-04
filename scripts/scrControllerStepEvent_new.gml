@@ -29,30 +29,16 @@ switch room
         
         // send local input to server
         scrSendLocalInput(0)
-        
-        // send position updates to remote client 
-        // send player position updates
-        for (var i=0; i<global.max_num_players; i++)
-        {
-            if global.player_object[i] >= 0 
-            {
-                // process previous input
-                scrProcessInputPrevious(i)
-                
-                // update remote clients
-                scrSendObjectUpdate(global.player_object[i])
-            } 
-        }    
-        
-        // process collisions
-        scrCheckCollisions()
-        
+                   
         // process player attributes
         for (var i=0; i<global.max_num_players; i++)
         {
             if global.player_object[i] >=0
             {
-                if global.player_health[i] <= 0 // player died
+                // process previous input
+                scrProcessInputPrevious(i)
+                
+                 if global.player_health[i] <= 0 // player died
                 {
                     with global.player_object[i]
                     {
@@ -70,11 +56,14 @@ switch room
                     global.player_health[i] = 100
                     
                     // send packet to move player on remote client
-                    scrSendObjectUpdate(global.player_object[i])
+                    scrSendPlayerUpdate(global.player_object[i])
                 }
             }
-        }     
-       
+        }   
+                    
+        // process collisions
+        scrCheckCollisions()
+              
         // destroy bullets that go outside the room
         with objBullet
         {
