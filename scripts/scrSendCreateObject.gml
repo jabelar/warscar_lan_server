@@ -14,6 +14,13 @@ buffer_write(global.tx_buff_server, buffer_u8, inst_id.image_index)
 buffer_write(global.tx_buff_server, buffer_u8, inst_id.image_speed)
 buffer_write(global.tx_buff_server, buffer_u8, inst_id.image_alpha)
 buffer_write(global.tx_buff_server, buffer_u32, inst_id.image_blend)
-
+if object_type == PLAYER1 
+{
+    buffer_write(global.tx_buff_server, buffer_s32, objPlayer1.angle_main_gun)
+}
+if object_type == PLAYER2 
+{
+    buffer_write(global.tx_buff_server, buffer_s32, objPlayer2.angle_main_gun)
+}
 show_debug_message("Sending create object packet to all clients")
 scrSendPacketToAll(global.tx_buff_server)

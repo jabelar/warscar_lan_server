@@ -103,9 +103,11 @@
     <scripts name="Events">
       <script>scripts\scrControllerCreateEvent.gml</script>
       <script>scripts\scrControllerBackspace.gml</script>
-      <script>scripts\scrControllerStepEvent.gml</script>
-      <script>scripts\scrMainMenuStepEvent.gml</script>
-      <script>scripts\scrGameStepEvent.gml</script>
+      <scripts name="Step Event">
+        <script>scripts\scrControllerStepEvent.gml</script>
+        <script>scripts\scrMainMenuStepEvent.gml</script>
+        <script>scripts\scrGameStepEvent.gml</script>
+      </scripts>
       <script>scripts\scrControllerDrawEvent.gml</script>
       <script>scripts\scrControllerDrawEvent_new.gml</script>
       <script>scripts\scrControllerRoomStartEvent_new.gml</script>
