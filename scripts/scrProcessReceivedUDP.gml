@@ -6,9 +6,12 @@ var packet_type = buffer_read(rx_buff, buffer_u8);
 switch packet_type
 {
     case NF_SERVER_ANNOUNCE:
-    {
-        global.my_ip_address = ip_addr_rx
-        // show_debug_message("My IP address = "+global.my_ip_address+", my server name = "+buffer_read(rx_buff, buffer_string))
+    {   
+        if global.my_ip_address != ip_addr_rx
+        {
+            show_debug_message("My IP address = "+ip_addr_rx+", my server name = "+buffer_read(rx_buff, buffer_string))
+            global.my_ip_address = ip_addr_rx
+        }
         break;
     }
     case NF_CLIENT_ANNOUNCE:

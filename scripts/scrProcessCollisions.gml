@@ -1,3 +1,5 @@
+/// scrProcessCollisions()
+
 item_id = instance_place(x, y, objItemHealth)
 if item_id > 0 // hit item
 {
