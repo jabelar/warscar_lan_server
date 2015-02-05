@@ -14,7 +14,6 @@ if not is_undefined(player_id)
     {
         case NF_INPUT:
         {
-            show_debug_message("Remote input packet received")
             global.key_forward[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_backward[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_right[player_id] = buffer_read(rx_buff, buffer_bool)
@@ -25,7 +24,9 @@ if not is_undefined(player_id)
             global.key_weapon1_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_weapon2_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_weapon3_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
-            // show_debug_message("Player "+string(player_id+1)+" key_forward ="+string(global.key_forward[1]))
+            
+            // show_debug_message("Input received from Player "+string(player_id+1)+" key_forward = "+string(global.key_forward[player_id])+ " key_right = "+string(global.key_right[player_id]))
+            
             break;
         }
         default: // unrecognized packet type

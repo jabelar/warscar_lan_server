@@ -1,6 +1,9 @@
 // show_debug_message("scrProcessPlayerStep starting")
 
-scrProcessInputLocal() 
+if current_player == PLAYER1
+{
+    scrProcessInputLocal() 
+}
 // note that movement scripts below use input variables on server side (after getting input packets)
 
 switch state
@@ -49,6 +52,7 @@ switch state
     }   
 }
 
+scrInputClearPressed(current_player)
 scrSendPlayerUpdate(id)
 
 // show_debug_message("scrProcessPlayerStep finished")

@@ -15,4 +15,4 @@ buffer_write(global.tx_buff_local_client, buffer_bool, global.key_weapon3_presse
 
 network_send_packet( global.socket_local_client_side, global.tx_buff_local_client, buffer_tell(global.tx_buff_local_client) )
 
-show_debug_message("Sending player input packet")
+// show_debug_message("Sending player input packet with key_forward = "+string(global.key_forward_local)+" and key_right = "+string(global.key_right_local))

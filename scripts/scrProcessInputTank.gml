@@ -3,6 +3,8 @@
 var joy_direction = point_direction(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
 var joy_distance = point_distance(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
 var ang_diff = angle_difference(joy_direction, image_angle)
+
+// show_debug_message("Angle difference is "+string(ang_diff))
     
 if joy_distance > 0.1
 {

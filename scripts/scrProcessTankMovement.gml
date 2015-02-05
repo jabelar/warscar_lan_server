@@ -1,6 +1,6 @@
 /// scrProcessTankMovement()
 
-show_debug_message("scrProcessTankMovement starting for player "+string(current_player+1))
+// show_debug_message("scrProcessTankMovement starting for player "+string(current_player+1))
 
 // process movement
 // don't move if DYING
@@ -24,7 +24,6 @@ else
         current_turn_speed = my_turn_speed ;
     }
     
-    show_debug_message("Current player = "+string(current_player))
     if global.key_forward[current_player]
     {
         show_debug_message("Moving forward")
