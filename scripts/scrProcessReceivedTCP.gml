@@ -15,11 +15,11 @@ if not is_undefined(player_id)
         case NF_INPUT:
         {
             // show_debug_message("Remote input packet received")
-            key_up[player_id] = buffer_read(rx_buff, buffer_bool)
-            key_down[player_id] = buffer_read(rx_buff, buffer_bool)
-            key_right[player_id] = buffer_read(rx_buff, buffer_bool)
-            key_left[player_id] = buffer_read(rx_buff, buffer_bool)
-            key_weapon[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_forward[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_backward[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_right[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_left[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_weapon[player_id] = buffer_read(rx_buff, buffer_bool)
             // show_debug_message("key_up ="+string(key_up[1]))
             break;
         }

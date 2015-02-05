@@ -117,7 +117,7 @@ scrPlayerCreateEvent()
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrProcessPlayerStep</script>
+            <script>scrProcessPlayer1Step</script>
           </argument>
           <argument>
             <kind>0</kind>

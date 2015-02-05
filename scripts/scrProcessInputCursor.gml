@@ -4,19 +4,19 @@ scrInputClear()
 
 if gamepad_axis_value(1, gp_axislv) < 0.05
 {
-    key_forward = true ;
+    global.key_forward[0] = true ;
 }
 if gamepad_axis_value(1, gp_axislh) < -0.05
 {
-    key_left = true ;
+    global.key_left[0] = true ;
 }
 if gamepad_axis_value(1, gp_axislh) > 0.05
 {
-    key_right = true ;
+    global.key_right[0] = true ;
 }        
 if gamepad_axis_value(1, gp_axislv) > -0.05
 {
-    key_backward = true ;
+    global.key_backward[0] = true ;
 }
 
 scrProcessInputTriggers()

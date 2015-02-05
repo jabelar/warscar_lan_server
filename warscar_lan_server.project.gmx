@@ -122,13 +122,15 @@
       <script>scripts\scrMenuRoomStartEvent.gml</script>
     </scripts>
     <scripts name="Players">
-      <script>scripts\scrProcessInput.gml</script>
-      <script>scripts\scrInputClear.gml</script>
-      <script>scripts\scrProcessInputCursor.gml</script>
-      <script>scripts\scrProcessInputTank.gml</script>
-      <script>scripts\scrProcessInputTurret.gml</script>
-      <script>scripts\scrProcessInputTriggers.gml</script>
-      <script>scripts\scrProcessInputOther.gml</script>
+      <scripts name="Input">
+        <script>scripts\scrProcessInputLocal.gml</script>
+        <script>scripts\scrInputClear.gml</script>
+        <script>scripts\scrProcessInputCursor.gml</script>
+        <script>scripts\scrProcessInputTank.gml</script>
+        <script>scripts\scrProcessInputTurret.gml</script>
+        <script>scripts\scrProcessInputTriggers.gml</script>
+        <script>scripts\scrProcessInputOther.gml</script>
+      </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
       <script>scripts\scrPlayerAlarm3Event.gml</script>
       <script>scripts\scrPlayerDrawEvent.gml</script>
@@ -137,7 +139,8 @@
       <script>scripts\scrKeepInRoom.gml</script>
       <script>scripts\scrProcessTankMovement.gml</script>
       <script>scripts\scrProcessTankOther.gml</script>
-      <script>scripts\scrProcessPlayerStep.gml</script>
+      <script>scripts\scrProcessPlayer1Step.gml</script>
+      <script>scripts\scrProcessPlayer2Step.gml</script>
       <script>scripts\scrPathEndEvent.gml</script>
       <scripts name="Artificial Intelligence">
         <script>scripts\scrPlayerAlarm1Event.gml</script>
@@ -168,11 +171,6 @@
         <script>scripts\scrIncrementScore.gml</script>
         <script>scripts\scrDecrementHealth.gml</script>
         <script>scripts\scrDecrementAmmo.gml</script>
-      </scripts>
-      <scripts name="Input">
-        <script>scripts\scrProcessInputPrevious.gml</script>
-        <script>scripts\scrProcessInputNew.gml</script>
-        <script>scripts\scrClearInput.gml</script>
       </scripts>
       <scripts name="Initialization">
         <script>scripts\scrConstants.gml</script>

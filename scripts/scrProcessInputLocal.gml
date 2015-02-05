@@ -1,3 +1,5 @@
+/// scrProcessInputLocal()
+
 // show_debug_message("scrProcessInput starting")
 
 scrInputClear()

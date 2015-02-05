@@ -1,6 +1,6 @@
 // show_debug_message("scrProcessPlayerStep starting")
 
-scrProcessInput()
+scrProcessInputLocal()
 
 switch state
 {

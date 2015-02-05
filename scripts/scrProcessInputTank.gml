@@ -8,18 +8,18 @@ if joy_distance > 0.1
 {
     if abs(ang_diff) < TANK_TURN_SPEED_BASE
     {
-        key_forward = true ;
+        global.key_forward[0] = true ;
     }
     else if abs(ang_diff) > (180 - TANK_TURN_SPEED_BASE * 9)
     {
-        key_backward = true ;
+        global.key_backward[0] = true ;
     }
     else if ang_diff < 0
     {
-        key_right = true ;
+        global.key_right[0] = true ;
     }
     else if ang_diff > 0
     {
-        key_left = true ;
+        global.key_left[0] = true ;
     }
 }
