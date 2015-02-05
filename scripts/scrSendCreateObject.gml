@@ -22,5 +22,5 @@ if obj_type == PLAYER2
 {
     buffer_write(global.tx_buff_server, buffer_s32, objPlayer2.angle_main_gun)
 }
-show_debug_message("Sending create object packet to all clients")
+// show_debug_message("Sending create object packet to all clients")
 scrSendPacketToAll(global.tx_buff_server)

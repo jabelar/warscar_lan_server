@@ -17,4 +17,3 @@ buffer_write(global.tx_buff_server, buffer_s32, inst_id.angle_main_gun)
 scrSendPacketToAll(global.tx_buff_server)
 
 // show_debug_message("Sending packet to update instance "+string(inst_id))
-
