@@ -2,6 +2,8 @@
 
 // show_debug_message("scrProcessInput starting")
 
+scrSavePreviousInput() 
+
 scrProcessInputTank()
 scrProcessInputTurret()
 scrProcessInputTriggers()

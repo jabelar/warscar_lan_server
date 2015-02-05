@@ -153,6 +153,7 @@
         <script>scripts\scrProcessInputTurret.gml</script>
         <script>scripts\scrProcessInputTriggers.gml</script>
         <script>scripts\scrProcessInputOther.gml</script>
+        <script>scripts\scrSavePreviousInput.gml</script>
       </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
       <script>scripts\scrProcessTankMovement.gml</script>

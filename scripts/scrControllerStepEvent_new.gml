@@ -25,7 +25,7 @@ switch room
     {
 
         // process new input
-        scrProcessInputNew(0) // only player 1 because new input for other players comes through networking event
+        scrProcessInputLocal() // only player 1 because new input for other players comes through networking event
         
         // send local input to server
         scrSendLocalInput(0)
