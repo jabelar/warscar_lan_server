@@ -48,6 +48,8 @@ switch state
     }   
 }
 
+scrInputClear(current_player)
+
 scrSendPlayerUpdate(id)
 
 // show_debug_message("scrProcessPlayerStep finished")

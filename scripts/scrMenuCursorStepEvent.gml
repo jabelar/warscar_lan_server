@@ -10,6 +10,8 @@ if global.key_backward[0] then y += 8
 if global.key_right[0] then x += 8
 if global.key_left[0] then x -= 8
 
+scrInputClear(0)
+
 scrKeepInRoom()
 
 // cycle through options on each click of a button

@@ -6,6 +6,9 @@ scrConstants()
 scrInitializeNetworkGameVariables()
 scrInitializeNetworking()
 scrInitializeGameVariables() 
-scrInputClear()
+for (var i=0; i<global.max_num_players; i++)
+{
+    scrInputClear(i)
+}
 
 show_debug_message("scrControllerCreateEvent finished")

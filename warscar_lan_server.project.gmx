@@ -155,9 +155,9 @@
         <script>scripts\scrProcessInputOther.gml</script>
       </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
+      <script>scripts\scrProcessTankMovement.gml</script>
       <script>scripts\scrProcessTankWeapons.gml</script>
       <script>scripts\scrKeepInRoom.gml</script>
-      <script>scripts\scrProcessTankMovement.gml</script>
       <script>scripts\scrProcessTankOther.gml</script>
     </scripts>
     <scripts name="Utilities">

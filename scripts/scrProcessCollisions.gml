@@ -48,13 +48,13 @@ if item_id > 0 // hit item
 // figure out which flag is which
 if current_player = PLAYER1
 {
-    own_flag_id = objFlagRed.id
-    enemy_flag_id = objFlagBlue.id
+    if instance_exists(objFlagRed) then own_flag_id = objFlagRed.id
+    if instance_exists(objFlagBlue) then enemy_flag_id = objFlagBlue.id
 }
 else // player 2
 {
-    own_flag_id = objFlagBlue.id
-    enemy_flag_id = objFlagRed.id
+    if instance_exists(objFlagBlue) then own_flag_id = objFlagBlue.id
+    if instance_exists(objFlagRed) then enemy_flag_id = objFlagRed.id
 }
        
 // check if hit enemy flag

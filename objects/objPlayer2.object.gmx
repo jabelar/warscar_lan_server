@@ -117,7 +117,7 @@ scrPlayerCreateEvent()
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrPlayerAlarm1Event</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>

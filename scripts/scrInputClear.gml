@@ -1,17 +1,16 @@
-/// scrInputClear()
+/// scrInputClear(player_id)
+var player_id = argument[0]
 
-// clear input
-for (var i=0; i<global.max_num_players; i++)
-{
-    global.key_forward[i] = false 
-    global.key_right[i] = false 
-    global.key_left[i] = false 
-    global.key_backward[i] = false 
-    global.key_turret_left[i] = false 
-    global.key_turret_right[i] = false 
-    global.key_change_spawn[i] = false 
-    global.key_flag[i] = false 
-    global.key_weapon1_pressed[i] = false 
-    global.key_weapon2_pressed[i] = false 
-    global.key_weapon3_pressed[i] = false 
-}
+// clear player input
+global.key_forward[player_id] = false 
+global.key_right[player_id] = false 
+global.key_left[player_id] = false 
+global.key_backward[player_id] = false 
+global.key_turret_left[player_id] = false 
+global.key_turret_right[player_id] = false 
+global.key_change_spawn[player_id] = false 
+global.key_flag[player_id] = false 
+global.key_weapon1_pressed[player_id] = false 
+global.key_weapon2_pressed[player_id] = false 
+global.key_weapon3_pressed[player_id] = false 
+

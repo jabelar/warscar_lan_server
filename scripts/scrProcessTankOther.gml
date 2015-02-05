@@ -1,5 +1,5 @@
 // pick up or drop own flag
-if key_flag
+if global.key_flag[current_player]
 {
     if have_own_flag // drop the flag
     {

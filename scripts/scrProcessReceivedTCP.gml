@@ -19,8 +19,13 @@ if not is_undefined(player_id)
             global.key_backward[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_right[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_left[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_turret_right[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_turret_left[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_flag[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_weapon1_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
-            // show_debug_message("key_up ="+string(key_up[1]))
+            global.key_weapon2_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
+            global.key_weapon3_pressed[player_id] = buffer_read(rx_buff, buffer_bool)
+            // show_debug_message("Player "+string(player_id+1)+" key_forward ="+string(global.key_forward[1]))
             break;
         }
         default: // unrecognized packet type

@@ -1,6 +1,6 @@
 /// scrProcessTankMovement()
 
-// show_debug_message("scrProcessTankMovement starting")
+show_debug_message("scrProcessTankMovement starting for player "+string(current_player+1))
 
 // process movement
 // don't move if DYING
@@ -26,6 +26,7 @@ else
     
     if global.key_forward[current_player]
     {
+        show_debug_message("Moving forward")
         move_contact_solid(direction, current_speed) ;
         tracks_id = instance_create(x, y, objTracks) ;
         tracks_id.image_angle = image_angle ;
