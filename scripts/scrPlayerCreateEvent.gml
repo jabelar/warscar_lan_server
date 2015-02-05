@@ -1,4 +1,7 @@
+/// scrPlayerCreateEvent
+
 show_debug_message("scrPlayerCreateEvent starting for player = "+string(current_player))
+
 if current_player == PLAYER1
 {
     body_sprite = sprHuskyRed

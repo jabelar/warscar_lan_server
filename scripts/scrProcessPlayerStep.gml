@@ -12,8 +12,10 @@ switch state
     {
         scrProcessTankMovement()
         scrProcessTankWeapons()
-        scrProcessCollisions()
         scrProcessTankOther()
+        
+        scrProcessCollisions()
+        
         if my_health <= HEALTH_BASE*0.6
         {
             state = CRITICAL
@@ -32,9 +34,10 @@ switch state
     {
         scrProcessTankMovement()
         scrProcessTankWeapons()
-        scrProcessCollisions()
         scrProcessTankOther()
 
+        scrProcessCollisions()
+        
         if my_health > 30 then state = NORMAL // happens when health restored
         if my_health <= 0 then state = DYING
         break ;
@@ -42,12 +45,17 @@ switch state
     case DYING:
     {
         effect_create_above(ef_explosion, x, y, 1, c_red)
-        scrSendCreateEffect(ef_explosion, x, y, 1, c_red)        marker_id = instance_create(xstart, ystart, objRespawnMarker)
-        marker_id.respawn_index = object_index
-        // don't need to send packet for created marker as markers aren't represented on client
+        scrSendCreateEffect(ef_explosion, x, y, 1, c_red)
+        
         audio_play_sound_at(sndExplosion, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
         scrSendPlaySound(SOUND_EXPLOSION, x, y)
-        scrDestroyObject(id)
+        
+        // respawn player
+        x = xstart
+        y = ystart
+        direction = 0
+        image_angle = 0
+        scrPlayerCreateEvent()
         break ;
     }   
 }

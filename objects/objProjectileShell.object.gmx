@@ -30,7 +30,7 @@
 alarm[0] = BULLET_RANGE_BASE * room_speed // this alarm sets the range of the projectile
 speed = BULLET_SPEED_BASE
 state = NORMAL
-my_damage = 10
+my_damage = 35
 </string>
           </argument>
         </arguments>
