@@ -16,6 +16,8 @@ else
     }
 }
 
+scrInputClear()
+
 // perform step events for each object
 with objCursor
 {

@@ -101,25 +101,48 @@
       <script>scripts\scrButtonDrawEvent.gml</script>
     </scripts>
     <scripts name="Events">
-      <script>scripts\scrControllerCreateEvent.gml</script>
-      <script>scripts\scrControllerBackspace.gml</script>
+      <scripts name="Create Event">
+        <script>scripts\scrControllerCreateEvent.gml</script>
+        <script>scripts\scrPlayerCreateEvent.gml</script>
+      </scripts>
       <scripts name="Step Event">
         <script>scripts\scrControllerStepEvent.gml</script>
         <script>scripts\scrMainMenuStepEvent.gml</script>
         <script>scripts\scrGameStepEvent.gml</script>
+        <script>scripts\scrProcessPlayer2Step.gml</script>
+        <script>scripts\scrControllerStepEvent_new.gml</script>
+        <script>scripts\scrProcessPlayer1Step.gml</script>
+        <scripts name="Menu">
+          <script>scripts\scrMenuCursorStepEvent.gml</script>
+          <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
+          <script>scripts\scrButtonPointsStepEvent.gml</script>
+        </scripts>
       </scripts>
-      <script>scripts\scrControllerDrawEvent.gml</script>
-      <script>scripts\scrControllerDrawEvent_new.gml</script>
-      <script>scripts\scrControllerRoomStartEvent_new.gml</script>
-      <script>scripts\scrControllerStepEvent_new.gml</script>
-      <script>scripts\scrControllerRoomStartEvent.gml</script>
-      <script>scripts\scrControllerDrawGui.gml</script>
-      <script>scripts\scrMap1RoomStart.gml</script>
-      <script>scripts\scrPopulateItems.gml</script>
-      <script>scripts\scrNetworkingEvent.gml</script>
-      <script>scripts\scrPopulateBuildings.gml</script>
-      <script>scripts\scrHindranceParentCreateEvent.gml</script>
-      <script>scripts\scrMenuRoomStartEvent.gml</script>
+      <scripts name="Draw GUI Event">
+        <script>scripts\scrControllerDrawGui.gml</script>
+      </scripts>
+      <scripts name="Draw Event">
+        <script>scripts\scrControllerDrawEvent_new.gml</script>
+        <script>scripts\scrControllerDrawEvent.gml</script>
+        <script>scripts\scrPlayerDrawEvent.gml</script>
+        <script>scripts\scrDrawHUD.gml</script>
+      </scripts>
+      <scripts name="Room Start Event">
+        <script>scripts\scrMenuRoomStartEvent.gml</script>
+        <script>scripts\scrPopulateBuildings.gml</script>
+        <script>scripts\scrHindranceParentCreateEvent.gml</script>
+        <script>scripts\scrPopulateItems.gml</script>
+        <script>scripts\scrMap1RoomStart.gml</script>
+        <script>scripts\scrControllerRoomStartEvent.gml</script>
+        <script>scripts\scrControllerRoomStartEvent_new.gml</script>
+      </scripts>
+      <scripts name="Networking Event">
+        <script>scripts\scrNetworkingEvent.gml</script>
+      </scripts>
+      <scripts name="Alarm Events">
+        <script>scripts\scrPlayerAlarm3Event.gml</script>
+      </scripts>
+      <script>scripts\scrControllerBackspace.gml</script>
     </scripts>
     <scripts name="Players">
       <scripts name="Input">
@@ -132,26 +155,10 @@
         <script>scripts\scrProcessInputOther.gml</script>
       </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
-      <script>scripts\scrPlayerAlarm3Event.gml</script>
-      <script>scripts\scrPlayerDrawEvent.gml</script>
-      <script>scripts\scrPlayerCreateEvent.gml</script>
       <script>scripts\scrProcessTankWeapons.gml</script>
       <script>scripts\scrKeepInRoom.gml</script>
       <script>scripts\scrProcessTankMovement.gml</script>
       <script>scripts\scrProcessTankOther.gml</script>
-      <script>scripts\scrProcessPlayer1Step.gml</script>
-      <script>scripts\scrProcessPlayer2Step.gml</script>
-      <script>scripts\scrPathEndEvent.gml</script>
-      <scripts name="Artificial Intelligence">
-        <script>scripts\scrPlayerAlarm1Event.gml</script>
-        <script>scripts\scrProcessEnvironment.gml</script>
-        <script>scripts\scrProcessAI.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Menu">
-      <script>scripts\scrMenuCursorStepEvent.gml</script>
-      <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
-      <script>scripts\scrButtonPointsStepEvent.gml</script>
     </scripts>
     <scripts name="Utilities">
       <scripts name="Misc">
@@ -184,11 +191,9 @@
         <script>scripts\scrInitializeNetworkGameVariables.gml</script>
         <script>scripts\scrInitializeGameVariables.gml</script>
       </scripts>
-      <scripts name="Drawing">
-        <script>scripts\scrDrawHUD.gml</script>
-      </scripts>
     </scripts>
     <scripts name="Networking">
+      <script>scripts\scrNetworkConnect.gml</script>
       <scripts name="Receive Packets">
         <script>scripts\scrProcessReceivedUDP.gml</script>
         <script>scripts\scrProcessReceivedTCP.gml</script>
@@ -211,7 +216,6 @@
         <script>scripts\scrSendCreateEffect.gml</script>
         <script>scripts\scrDestroyObject.gml</script>
       </scripts>
-      <script>scripts\scrNetworkConnect.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

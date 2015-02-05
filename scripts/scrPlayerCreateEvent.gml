@@ -20,8 +20,6 @@ input_fire3 = vk_space
 input_change_spawn = ord('S')
 input_flag = ord('F')
 
-scrInputClear()
-
 my_speed = TANK_SPEED_BASE
 my_turn_speed = TANK_TURN_SPEED_BASE
 current_speed = my_speed

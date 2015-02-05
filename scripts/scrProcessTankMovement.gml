@@ -1,4 +1,7 @@
+/// scrProcessTankMovement()
+
 // show_debug_message("scrProcessTankMovement starting")
+
 // process movement
 // don't move if DYING
 if state == DYING then 
@@ -21,7 +24,7 @@ else
         current_turn_speed = my_turn_speed ;
     }
     
-    if key_forward
+    if global.key_forward[current_player]
     {
         move_contact_solid(direction, current_speed) ;
         tracks_id = instance_create(x, y, objTracks) ;
@@ -30,7 +33,7 @@ else
         scrSendCreateObject(TRACKS, tracks_id)
     }
     
-    if key_backward
+    if global.key_backward[current_player]
     {
         move_contact_solid(direction+180, current_speed/2) ;
         tracks_id = instance_create(x, y, objTracks) ;
@@ -39,7 +42,7 @@ else
         scrSendCreateObject(TRACKS, tracks_id)
     }
     
-    if key_right
+    if global.key_right[current_player]
     {
         direction -= current_turn_speed ;
         image_angle = direction ;
@@ -52,7 +55,7 @@ else
         }
     }
     
-    if key_left
+    if global.key_left[current_player]
     {
         direction += current_turn_speed ;
         image_angle = direction ;
@@ -66,11 +69,11 @@ else
     }
     
     // process turret movement
-    if key_turret_left
+    if global.key_turret_left[current_player]
     {
         angle_main_gun += TANK_TURN_SPEED_BASE*TANK_TURRET_SPEED_MULTIPLIER
     }
-    else if key_turret_right
+    else if global.key_turret_right[current_player]
     {
         angle_main_gun -= TANK_TURN_SPEED_BASE*TANK_TURRET_SPEED_MULTIPLIER
     }

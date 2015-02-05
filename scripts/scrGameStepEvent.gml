@@ -12,4 +12,9 @@ if global.player_score[1] >= global.points_to_win
     game_restart()
 }
 
+scrInputClear()
+
+with objPlayer1 { scrProcessPlayer1Step() }
+with objPlayer2 { scrProcessPlayer2Step() }
+
 scrSendHUD()

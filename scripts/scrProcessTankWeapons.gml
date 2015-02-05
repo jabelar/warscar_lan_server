@@ -1,5 +1,7 @@
+/// scrProcessTankWeapons()
+
 // process weapons
-if key_weapon1_pressed
+if global.key_weapon1_pressed[current_player]
 {
     if alarm[0] < 1
     {

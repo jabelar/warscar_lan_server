@@ -4,6 +4,8 @@ switch state
 {
     case NORMAL:
     {
+        // don't need to process input because receive packets do the updating
+        
         scrProcessTankMovement()
         scrProcessTankWeapons()
         scrProcessCollisions()

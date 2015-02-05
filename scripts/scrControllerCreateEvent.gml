@@ -6,5 +6,6 @@ scrConstants()
 scrInitializeNetworkGameVariables()
 scrInitializeNetworking()
 scrInitializeGameVariables() 
+scrInputClear()
 
 show_debug_message("scrControllerCreateEvent finished")

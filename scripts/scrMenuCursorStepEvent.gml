@@ -5,15 +5,15 @@ var button_id ;
 
 scrProcessInputCursor()
 
-if key_forward then y -=8
-if key_backward then y += 8
-if key_right then x += 8
-if key_left then x -= 8
+if global.key_forward[0] then y -=8
+if global.key_backward[0] then y += 8
+if global.key_right[0] then x += 8
+if global.key_left[0] then x -= 8
 
 scrKeepInRoom()
 
 // cycle through options on each click of a button
-if key_weapon1_pressed
+if global.key_weapon1_pressed[0]
 {
     button_id = instance_position(x, y, objParentButton)
     with button_id
@@ -25,7 +25,7 @@ if key_weapon1_pressed
 }
 
 // process starting the game   
-if key_weapon1_pressed and instance_position(x, y, objButtonPlay)
+if global.key_weapon1_pressed[0] and instance_position(x, y, objButtonPlay)
 {
     room_goto(roomMain)
 }
