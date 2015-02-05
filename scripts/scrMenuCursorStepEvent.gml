@@ -5,10 +5,10 @@ var button_id ;
 scrProcessInputCursor()
 // note that the input processed will only affect below after received input packet locally
 
-if global.key_forward[0] then y -=8
-if global.key_backward[0] then y += 8
-if global.key_right[0] then x += 8
-if global.key_left[0] then x -= 8
+if global.key_forward[0] then y -= 16
+if global.key_backward[0] then y += 16
+if global.key_right[0] then x += 16
+if global.key_left[0] then x -= 16
 
 scrKeepInRoom()
 

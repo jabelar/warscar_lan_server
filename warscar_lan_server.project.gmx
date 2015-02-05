@@ -163,7 +163,6 @@
     </scripts>
     <scripts name="Utilities">
       <scripts name="Misc">
-        <script>scripts\scrCheckCollisions.gml</script>
         <script>scripts\scrNextOpenPlayerID.gml</script>
         <script>scripts\scrGetPlayerFromInstance.gml</script>
         <script>scripts\scrShowPlayerArray.gml</script>

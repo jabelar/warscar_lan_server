@@ -24,6 +24,7 @@ else
         current_turn_speed = my_turn_speed ;
     }
     
+    show_debug_message("Current player = "+string(current_player))
     if global.key_forward[current_player]
     {
         show_debug_message("Moving forward")
