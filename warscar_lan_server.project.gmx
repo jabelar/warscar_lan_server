@@ -109,9 +109,7 @@
         <script>scripts\scrControllerStepEvent.gml</script>
         <script>scripts\scrMainMenuStepEvent.gml</script>
         <script>scripts\scrGameStepEvent.gml</script>
-        <script>scripts\scrProcessPlayer2Step.gml</script>
-        <script>scripts\scrControllerStepEvent_new.gml</script>
-        <script>scripts\scrProcessPlayer1Step.gml</script>
+        <script>scripts\scrProcessPlayerStep.gml</script>
         <scripts name="Menu">
           <script>scripts\scrMenuCursorStepEvent.gml</script>
           <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
@@ -147,13 +145,15 @@
     <scripts name="Players">
       <scripts name="Input">
         <script>scripts\scrProcessInputLocal.gml</script>
-        <script>scripts\scrInputClear.gml</script>
+        <script>scripts\scrInputClearLocal.gml</script>
+        <script>scripts\scrInputClearPressed.gml</script>
         <script>scripts\scrProcessInputCursor.gml</script>
         <script>scripts\scrProcessInputTank.gml</script>
         <script>scripts\scrProcessInputTurret.gml</script>
         <script>scripts\scrProcessInputTriggers.gml</script>
         <script>scripts\scrProcessInputOther.gml</script>
         <script>scripts\scrSavePreviousInput.gml</script>
+        <script>scripts\scrInputHasChanged.gml</script>
       </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
       <script>scripts\scrProcessTankMovement.gml</script>
@@ -191,6 +191,7 @@
         <script>scripts\scrInitializeSockets.gml</script>
         <script>scripts\scrInitializeNetworkGameVariables.gml</script>
         <script>scripts\scrInitializeGameVariables.gml</script>
+        <script>scripts\scrInitializeInputBooleans.gml</script>
       </scripts>
     </scripts>
     <scripts name="Networking">

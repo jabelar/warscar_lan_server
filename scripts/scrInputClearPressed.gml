@@ -1,4 +1,4 @@
-/// scrInputClear(player_id)
+/// scrInputClearPressed(player_id)
 var player_id = argument[0]
 
 // clear player pressed style inputs

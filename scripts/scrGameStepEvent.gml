@@ -12,7 +12,20 @@ if global.player_score[1] >= global.points_to_win
     game_restart()
 }
 
-with objPlayer1 { scrProcessPlayer1Step() }
-with objPlayer2 { scrProcessPlayer2Step() }
+with objPlayer1 { scrProcessPlayerStep() }
+with objPlayer2 { scrProcessPlayerStep() }
+
+// process collisions
+scrCheckCollisions()
+      
+// destroy bullets that go outside the room
+with objProjectileShell
+{
+    if (x < 0) or (x > room_width) or (y < 0) or (y > room_height) 
+    {
+        scrDestroyObject(id)
+    }     
+}    
 
 scrSendHUD()
+

@@ -14,7 +14,7 @@ if not is_undefined(player_id)
     {
         case NF_INPUT:
         {
-            // show_debug_message("Remote input packet received")
+            show_debug_message("Remote input packet received")
             global.key_forward[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_backward[player_id] = buffer_read(rx_buff, buffer_bool)
             global.key_right[player_id] = buffer_read(rx_buff, buffer_bool)

@@ -48,7 +48,7 @@ switch state
     }   
 }
 
-scrInputClear(current_player)
+scrInputClearPressed(current_player)
 
 scrSendPlayerUpdate(id)
 

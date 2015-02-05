@@ -1,16 +1,14 @@
-// need to react to any input type
-// so check them all
+/// scrMenuCursorStepEvent()
 
 var button_id ;
 
 scrProcessInputCursor()
+// note that the input processed will only affect below after received input packet locally
 
 if global.key_forward[0] then y -=8
 if global.key_backward[0] then y += 8
 if global.key_right[0] then x += 8
 if global.key_left[0] then x -= 8
-
-scrInputClear(0)
 
 scrKeepInRoom()
 
@@ -31,3 +29,5 @@ if global.key_weapon1_pressed[0] and instance_position(x, y, objButtonPlay)
 {
     room_goto(roomMain)
 }
+
+scrInputClearPressed(0)
