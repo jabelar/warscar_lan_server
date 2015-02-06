@@ -8,22 +8,20 @@ var ang_diff = angle_difference(joy_direction, image_angle)
     
 if joy_distance > 0.1
 {
-    if abs(ang_diff) < current_turn_speed
+    if abs(ang_diff) < TANK_TURN_SPEED_BASE
     {
         global.key_forward_local = true ;
     }
-    else if abs(ang_diff) > (180 - current_turn_speed * 9)
+    else if abs(ang_diff) > (180 - TANK_TURN_SPEED_BASE * 9)
     {
         global.key_backward_local = true ;
     }
     else if ang_diff < 0
     {
-        show_debug_message("Key right")
         global.key_right_local = true ;
     }
     else if ang_diff > 0
     {
-        show_debug_message("Key left")
         global.key_left_local = true ;
     }
 }

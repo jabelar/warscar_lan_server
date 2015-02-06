@@ -143,14 +143,23 @@
       <script>scripts\scrControllerBackspace.gml</script>
     </scripts>
     <scripts name="Players">
+      <scripts name="Input">
+        <script>scripts\scrProcessInputLocal.gml</script>
+        <script>scripts\scrInputClearLocal.gml</script>
+        <script>scripts\scrInputClearPressed.gml</script>
+        <script>scripts\scrProcessInputCursor.gml</script>
+        <script>scripts\scrProcessInputTank.gml</script>
+        <script>scripts\scrProcessInputTurret.gml</script>
+        <script>scripts\scrProcessInputTriggers.gml</script>
+        <script>scripts\scrProcessInputOther.gml</script>
+        <script>scripts\scrSavePreviousInput.gml</script>
+        <script>scripts\scrInputHasChanged.gml</script>
+      </scripts>
       <script>scripts\scrProcessCollisions.gml</script>
       <script>scripts\scrProcessTankMovement.gml</script>
       <script>scripts\scrProcessTankWeapons.gml</script>
       <script>scripts\scrKeepInRoom.gml</script>
       <script>scripts\scrProcessTankOther.gml</script>
-      <scripts name="Remote Input">
-        <script>scripts\scrInputClearPressed.gml</script>
-      </scripts>
     </scripts>
     <scripts name="Utilities">
       <scripts name="Misc">
@@ -201,34 +210,12 @@
         <script>scripts\scrSendPacketToAll.gml</script>
         <script>scripts\scrSendObjectUpdate.gml</script>
         <script>scripts\scrSendPlayerUpdate.gml</script>
+        <script>scripts\scrSendLocalInput.gml</script>
         <script>scripts\scrSendKickToSocket.gml</script>
         <script>scripts\scrSendHUD.gml</script>
         <script>scripts\scrSendCreateObject.gml</script>
         <script>scripts\scrSendCreateEffect.gml</script>
         <script>scripts\scrDestroyObject.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Client">
-      <scripts name="Events">
-        <script>scripts\scrClientCreateEvent.gml</script>
-        <script>scripts\scrClientStep.gml</script>
-        <script>scripts\scrClientRoomStartEvent.gml</script>
-      </scripts>
-      <scripts name="Networking">
-        <scripts name="Transmit Packets">
-          <script>scripts\scrSendLocalInput.gml</script>
-        </scripts>
-      </scripts>
-      <scripts name="Input">
-        <script>scripts\scrProcessInputLocal.gml</script>
-        <script>scripts\scrInputClearLocal.gml</script>
-        <script>scripts\scrProcessInputCursor.gml</script>
-        <script>scripts\scrProcessInputTank.gml</script>
-        <script>scripts\scrProcessInputTurret.gml</script>
-        <script>scripts\scrProcessInputTriggers.gml</script>
-        <script>scripts\scrProcessInputOther.gml</script>
-        <script>scripts\scrSavePreviousInput.gml</script>
-        <script>scripts\scrInputHasChanged.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -262,7 +249,6 @@
     </objects>
     <objects name="Controllers">
       <object>objects\objGameController</object>
-      <object>objects\objClientController</object>
     </objects>
     <objects name="Players">
       <object>objects\objPlayer1</object>

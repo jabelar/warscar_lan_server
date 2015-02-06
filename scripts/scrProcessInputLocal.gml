@@ -12,7 +12,6 @@ scrProcessInputOther()
 
 if scrInputHasChanged()
 {
-    show_debug_message("Local input changed")
     scrSendLocalInput()
 }
 
