@@ -26,7 +26,7 @@ else
     
     if global.key_forward[current_player]
     {
-        show_debug_message("Moving forward")
+        // show_debug_message("Moving forward")
         move_contact_solid(direction, current_speed) ;
         tracks_id = instance_create(x, y, objTracks) ;
         tracks_id.image_angle = image_angle ;
