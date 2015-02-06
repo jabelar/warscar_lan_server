@@ -29,6 +29,3 @@ with objProjectileShell
         scrDestroyObject(id)
     }     
 }    
-
-scrSendHUD()
-

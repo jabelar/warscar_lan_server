@@ -107,7 +107,7 @@ state = DYING
         victim_id = collision_line(x, y, x+lengthdir_x(speed, direction), y+lengthdir_y(speed, direction), other_player, true, true)
         if victim_id &gt; 0
         {
-            victim_id.my_health -= my_damage
+            if my_player = PLAYER1 then scrDecrementHealth(PLAYER2, my_damage) else scrDecrementHealth(PLAYER1, my_damage)
             state = DYING // destroy bullet
         }
         break ;

@@ -16,7 +16,7 @@ switch state
         
         scrProcessCollisions()
         
-        if my_health <= HEALTH_BASE*0.6
+        if global.player_health[current_player] <= HEALTH_BASE*0.6
         {
             state = CRITICAL
             // create smoking effect
@@ -27,7 +27,7 @@ switch state
             // stop smoking
             alarm[3] = -1
         }
-        if my_health <= 0 then state = DYING
+        if global.player_health[current_player] <= 0 then state = DYING
         break ;
     }
     case CRITICAL:
@@ -38,8 +38,8 @@ switch state
 
         scrProcessCollisions()
         
-        if my_health > 30 then state = NORMAL // happens when health restored
-        if my_health <= 0 then state = DYING
+        if global.player_health[current_player] > 30 then state = NORMAL // happens when health restored
+        if global.player_health[current_player] <= 0 then state = DYING
         break ;
     }
     case DYING:

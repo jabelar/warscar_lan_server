@@ -104,26 +104,56 @@
       <scripts name="Create Event">
         <script>scripts\scrControllerCreateEvent.gml</script>
         <script>scripts\scrPlayerCreateEvent.gml</script>
+        <scripts name="Initialization">
+          <script>scripts\scrConstants.gml</script>
+          <script>scripts\scrGameConstants.gml</script>
+          <script>scripts\scrNetworkingConstants.gml</script>
+          <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
+          <script>scripts\scrInitializeNetworking.gml</script>
+          <script>scripts\scrInitializeMaps.gml</script>
+          <script>scripts\scrInitializeBuffers.gml</script>
+          <script>scripts\scrInitializeSockets.gml</script>
+          <script>scripts\scrInitializeNetworkGameVariables.gml</script>
+          <script>scripts\scrInitializeGameVariables.gml</script>
+          <script>scripts\scrInitializeInputBooleans.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Step Event">
         <script>scripts\scrControllerStepEvent.gml</script>
         <script>scripts\scrMainMenuStepEvent.gml</script>
         <script>scripts\scrGameStepEvent.gml</script>
-        <script>scripts\scrProcessPlayerStep.gml</script>
         <scripts name="Menu">
           <script>scripts\scrMenuCursorStepEvent.gml</script>
           <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
           <script>scripts\scrButtonPointsStepEvent.gml</script>
+        </scripts>
+        <scripts name="Players">
+          <script>scripts\scrProcessPlayerStep.gml</script>
+          <script>scripts\scrProcessCollisions.gml</script>
+          <script>scripts\scrProcessTankMovement.gml</script>
+          <script>scripts\scrProcessTankWeapons.gml</script>
+          <script>scripts\scrKeepInRoom.gml</script>
+          <script>scripts\scrProcessTankOther.gml</script>
+          <scripts name="Input">
+            <script>scripts\scrProcessInputLocal.gml</script>
+            <script>scripts\scrInputClearLocal.gml</script>
+            <script>scripts\scrInputClearPressed.gml</script>
+            <script>scripts\scrProcessInputCursor.gml</script>
+            <script>scripts\scrProcessInputTank.gml</script>
+            <script>scripts\scrProcessInputTurret.gml</script>
+            <script>scripts\scrProcessInputTriggers.gml</script>
+            <script>scripts\scrProcessInputOther.gml</script>
+            <script>scripts\scrSavePreviousInput.gml</script>
+            <script>scripts\scrInputHasChanged.gml</script>
+          </scripts>
         </scripts>
       </scripts>
       <scripts name="Draw GUI Event">
         <script>scripts\scrControllerDrawGui.gml</script>
       </scripts>
       <scripts name="Draw Event">
-        <script>scripts\scrControllerDrawEvent_new.gml</script>
         <script>scripts\scrControllerDrawEvent.gml</script>
         <script>scripts\scrPlayerDrawEvent.gml</script>
-        <script>scripts\scrDrawHUD.gml</script>
       </scripts>
       <scripts name="Room Start Event">
         <script>scripts\scrMenuRoomStartEvent.gml</script>
@@ -142,25 +172,6 @@
       </scripts>
       <script>scripts\scrControllerBackspace.gml</script>
     </scripts>
-    <scripts name="Players">
-      <scripts name="Input">
-        <script>scripts\scrProcessInputLocal.gml</script>
-        <script>scripts\scrInputClearLocal.gml</script>
-        <script>scripts\scrInputClearPressed.gml</script>
-        <script>scripts\scrProcessInputCursor.gml</script>
-        <script>scripts\scrProcessInputTank.gml</script>
-        <script>scripts\scrProcessInputTurret.gml</script>
-        <script>scripts\scrProcessInputTriggers.gml</script>
-        <script>scripts\scrProcessInputOther.gml</script>
-        <script>scripts\scrSavePreviousInput.gml</script>
-        <script>scripts\scrInputHasChanged.gml</script>
-      </scripts>
-      <script>scripts\scrProcessCollisions.gml</script>
-      <script>scripts\scrProcessTankMovement.gml</script>
-      <script>scripts\scrProcessTankWeapons.gml</script>
-      <script>scripts\scrKeepInRoom.gml</script>
-      <script>scripts\scrProcessTankOther.gml</script>
-    </scripts>
     <scripts name="Utilities">
       <scripts name="Misc">
         <script>scripts\scrNextOpenPlayerID.gml</script>
@@ -177,20 +188,9 @@
         <script>scripts\scrSetAmmo.gml</script>
         <script>scripts\scrIncrementScore.gml</script>
         <script>scripts\scrDecrementHealth.gml</script>
+        <script>scripts\scrIncrementHealth.gml</script>
         <script>scripts\scrDecrementAmmo.gml</script>
-      </scripts>
-      <scripts name="Initialization">
-        <script>scripts\scrConstants.gml</script>
-        <script>scripts\scrGameConstants.gml</script>
-        <script>scripts\scrNetworkingConstants.gml</script>
-        <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
-        <script>scripts\scrInitializeNetworking.gml</script>
-        <script>scripts\scrInitializeMaps.gml</script>
-        <script>scripts\scrInitializeBuffers.gml</script>
-        <script>scripts\scrInitializeSockets.gml</script>
-        <script>scripts\scrInitializeNetworkGameVariables.gml</script>
-        <script>scripts\scrInitializeGameVariables.gml</script>
-        <script>scripts\scrInitializeInputBooleans.gml</script>
+        <script>scripts\scrIncrementAmmo.gml</script>
       </scripts>
     </scripts>
     <scripts name="Networking">

@@ -27,9 +27,7 @@ my_speed = TANK_SPEED_BASE
 my_turn_speed = TANK_TURN_SPEED_BASE
 current_speed = my_speed
 current_turn_speed = my_turn_speed
-global.ammo_main_gun[current_player] = 10
-my_score = 0
-my_health = HEALTH_BASE
+
 state = NORMAL
 
 // offsets to ensure weapons launch from correct part

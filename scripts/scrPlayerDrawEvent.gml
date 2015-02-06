@@ -1,6 +1,6 @@
 // show_debug_message("scrPlayerDrawEvent starting")
 
-draw_healthbar(x-TILE_SIZE, y-1.5*TILE_SIZE, x+TILE_SIZE, y-1.3*TILE_SIZE, my_health, c_black, c_red, c_green, 0, true, true)
+draw_healthbar(x-TILE_SIZE, y-1.5*TILE_SIZE, x+TILE_SIZE, y-1.3*TILE_SIZE, global.player_health[current_player], c_black, c_red, c_green, 0, true, true)
 draw_sprite_ext(body_sprite, image_index, x, y, 1, 1, image_angle, c_white, 1)
 // draw weapons
 if has_main_gun then

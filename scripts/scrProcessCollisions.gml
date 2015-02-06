@@ -4,8 +4,7 @@
 item_id = instance_place(x, y, objItemHealth)
 if item_id > 0 // hit item
 {
-    my_health += 20
-    if my_health > 100 then my_health = 100
+    scrIncrementHealth(current_player, 20)
     audio_play_sound_at(sndItem, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
     scrSendPlaySound(SOUND_ITEM, x, y)
     scrDestroyObject(item_id)
@@ -27,7 +26,7 @@ if item_id > 0 // hit item
 item_id = instance_place(x, y, objItemAmmo)
 if item_id > 0 // hit item
 {
-    global.ammo_main_gun[current_player] += 10
+    scrIncrementAmmo(current_player, 10)
     audio_play_sound_at(sndItem, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
     scrSendPlaySound(SOUND_ITEM, x, y)
     scrDestroyObject(item_id)
@@ -121,7 +120,7 @@ if base_id > 0 // hit home base
             {
                 if state = FLAG_CAPTURED
                 {
-                    global.player_score[other.current_player] += 1
+                    scrIncrementScore(other.current_player, 1)
                     audio_play_sound_at(sndFanfare, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
                     scrSendPlaySound(SOUND_FANFARE, x, y)
                     state = FLAG_HOME
