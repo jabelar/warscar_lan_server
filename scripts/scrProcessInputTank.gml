@@ -10,20 +10,20 @@ if joy_distance > 0.1
 {
     if abs(ang_diff) < current_turn_speed
     {
-        key_forward= true ;
+        global.key_forward_local = true ;
     }
     else if abs(ang_diff) > (180 - current_turn_speed * 9)
     {
-        key_backward= true ;
+        global.key_backward_local = true ;
     }
     else if ang_diff < 0
     {
         show_debug_message("Key right")
-        key_right= true ;
+        global.key_right_local = true ;
     }
     else if ang_diff > 0
     {
         show_debug_message("Key left")
-        key_left= true ;
+        global.key_left_local = true ;
     }
 }

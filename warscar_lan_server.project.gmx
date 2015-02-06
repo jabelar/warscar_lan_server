@@ -96,143 +96,132 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Server">
-      <scripts name="Display Management">
-        <script>scripts\scrSetApplicationSurfaceSize.gml</script>
-        <script>scripts\scrButtonDrawEvent.gml</script>
+    <scripts name="Display Management">
+      <script>scripts\scrSetApplicationSurfaceSize.gml</script>
+      <script>scripts\scrButtonDrawEvent.gml</script>
+    </scripts>
+    <scripts name="Events">
+      <scripts name="Create Event">
+        <script>scripts\scrControllerCreateEvent.gml</script>
+        <script>scripts\scrPlayerCreateEvent.gml</script>
       </scripts>
-      <scripts name="Events">
-        <scripts name="Create Event">
-          <script>scripts\scrControllerCreateEvent.gml</script>
-          <script>scripts\scrPlayerCreateEvent.gml</script>
-          <scripts name="Initialization">
-            <script>scripts\scrConstants.gml</script>
-            <script>scripts\scrGameConstants.gml</script>
-            <script>scripts\scrNetworkingConstants.gml</script>
-            <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
-            <script>scripts\scrInitializeNetworking.gml</script>
-            <script>scripts\scrInitializeMaps.gml</script>
-            <script>scripts\scrInitializeBuffers.gml</script>
-            <script>scripts\scrInitializeSockets.gml</script>
-            <script>scripts\scrInitializeNetworkGameVariables.gml</script>
-            <script>scripts\scrInitializeGameVariables.gml</script>
-            <script>scripts\scrInitializeInputBooleansServer.gml</script>
-          </scripts>
-        </scripts>
-        <scripts name="Step Event">
-          <script>scripts\scrControllerStepEvent.gml</script>
-          <script>scripts\scrMainMenuStepEvent.gml</script>
-          <script>scripts\scrGameStepEvent.gml</script>
-          <script>scripts\scrProcessPlayerStep.gml</script>
-          <scripts name="Menu">
-            <script>scripts\scrMenuCursorStepEvent.gml</script>
-            <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
-            <script>scripts\scrButtonPointsStepEvent.gml</script>
-          </scripts>
-        </scripts>
-        <scripts name="Draw GUI Event">
-          <script>scripts\scrControllerDrawGui.gml</script>
-        </scripts>
-        <scripts name="Draw Event">
-          <script>scripts\scrControllerDrawEvent_new.gml</script>
-          <script>scripts\scrControllerDrawEvent.gml</script>
-          <script>scripts\scrPlayerDrawEvent.gml</script>
-          <script>scripts\scrDrawHUD.gml</script>
-        </scripts>
-        <scripts name="Room Start Event">
-          <script>scripts\scrMenuRoomStartEvent.gml</script>
-          <script>scripts\scrPopulateBuildings.gml</script>
-          <script>scripts\scrHindranceParentCreateEvent.gml</script>
-          <script>scripts\scrPopulateItems.gml</script>
-          <script>scripts\scrMap1RoomStart.gml</script>
-          <script>scripts\scrControllerRoomStartEvent.gml</script>
-          <script>scripts\scrControllerRoomStartEvent_new.gml</script>
-        </scripts>
-        <scripts name="Networking Event">
-          <script>scripts\scrNetworkingEvent.gml</script>
-        </scripts>
-        <scripts name="Alarm Events">
-          <script>scripts\scrPlayerAlarm3Event.gml</script>
-        </scripts>
-        <script>scripts\scrControllerBackspace.gml</script>
-      </scripts>
-      <scripts name="Players">
-        <script>scripts\scrProcessCollisions.gml</script>
-        <script>scripts\scrProcessTankMovement.gml</script>
-        <script>scripts\scrProcessTankWeapons.gml</script>
-        <script>scripts\scrKeepInRoom.gml</script>
-        <script>scripts\scrProcessTankOther.gml</script>
-        <scripts name="Remote Input">
-          <script>scripts\scrInputClearPressed.gml</script>
+      <scripts name="Step Event">
+        <script>scripts\scrControllerStepEvent.gml</script>
+        <script>scripts\scrMainMenuStepEvent.gml</script>
+        <script>scripts\scrGameStepEvent.gml</script>
+        <script>scripts\scrProcessPlayerStep.gml</script>
+        <scripts name="Menu">
+          <script>scripts\scrMenuCursorStepEvent.gml</script>
+          <script>scripts\scrButtonMusicLevelStepEvent.gml</script>
+          <script>scripts\scrButtonPointsStepEvent.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Utilities">
-        <scripts name="Misc">
-          <script>scripts\scrNextOpenPlayerID.gml</script>
-          <script>scripts\scrGetPlayerFromInstance.gml</script>
-          <script>scripts\scrShowPlayerArray.gml</script>
-          <script>scripts\scrFindFreeSpace.gml</script>
-          <script>scripts\scrDeactivateObjectsOutsideView.gml</script>
-          <script>scripts\scrShowMapContents.gml</script>
-          <script>scripts\scrGetNumPlayers.gml</script>
-        </scripts>
-        <scripts name="Setters">
-          <script>scripts\scrSetScore.gml</script>
-          <script>scripts\scrSetHealth.gml</script>
-          <script>scripts\scrSetAmmo.gml</script>
-          <script>scripts\scrIncrementScore.gml</script>
-          <script>scripts\scrDecrementHealth.gml</script>
-          <script>scripts\scrDecrementAmmo.gml</script>
-        </scripts>
+      <scripts name="Draw GUI Event">
+        <script>scripts\scrControllerDrawGui.gml</script>
       </scripts>
-      <scripts name="Networking">
-        <script>scripts\scrNetworkConnect.gml</script>
-        <scripts name="Receive Packets">
-          <script>scripts\scrProcessReceivedUDP.gml</script>
-          <script>scripts\scrProcessReceivedTCP.gml</script>
-          <script>scripts\scrConnectClient.gml</script>
-          <script>scripts\scrClientDisconnected.gml</script>
-        </scripts>
-        <scripts name="Transmit Packets">
-          <script>scripts\scrSendCreateAll.gml</script>
-          <script>scripts\scrSendServerBroadcast.gml</script>
-          <script>scripts\scrSendPlaySound.gml</script>
-          <script>scripts\scrSendPacketToSocket.gml</script>
-          <script>scripts\scrSendPacketToPlayer.gml</script>
-          <script>scripts\scrSendPacketToAll.gml</script>
-          <script>scripts\scrSendObjectUpdate.gml</script>
-          <script>scripts\scrSendPlayerUpdate.gml</script>
-          <script>scripts\scrSendKickToSocket.gml</script>
-          <script>scripts\scrSendHUD.gml</script>
-          <script>scripts\scrSendCreateObject.gml</script>
-          <script>scripts\scrSendCreateEffect.gml</script>
-          <script>scripts\scrDestroyObject.gml</script>
-        </scripts>
+      <scripts name="Draw Event">
+        <script>scripts\scrControllerDrawEvent_new.gml</script>
+        <script>scripts\scrControllerDrawEvent.gml</script>
+        <script>scripts\scrPlayerDrawEvent.gml</script>
+        <script>scripts\scrDrawHUD.gml</script>
+      </scripts>
+      <scripts name="Room Start Event">
+        <script>scripts\scrMenuRoomStartEvent.gml</script>
+        <script>scripts\scrPopulateBuildings.gml</script>
+        <script>scripts\scrHindranceParentCreateEvent.gml</script>
+        <script>scripts\scrPopulateItems.gml</script>
+        <script>scripts\scrMap1RoomStart.gml</script>
+        <script>scripts\scrControllerRoomStartEvent.gml</script>
+        <script>scripts\scrControllerRoomStartEvent_new.gml</script>
+      </scripts>
+      <scripts name="Networking Event">
+        <script>scripts\scrNetworkingEvent.gml</script>
+      </scripts>
+      <scripts name="Alarm Events">
+        <script>scripts\scrPlayerAlarm3Event.gml</script>
+      </scripts>
+      <script>scripts\scrControllerBackspace.gml</script>
+    </scripts>
+    <scripts name="Players">
+      <script>scripts\scrProcessCollisions.gml</script>
+      <script>scripts\scrProcessTankMovement.gml</script>
+      <script>scripts\scrProcessTankWeapons.gml</script>
+      <script>scripts\scrKeepInRoom.gml</script>
+      <script>scripts\scrProcessTankOther.gml</script>
+      <scripts name="Remote Input">
+        <script>scripts\scrInputClearPressed.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Utilities">
+      <scripts name="Misc">
+        <script>scripts\scrNextOpenPlayerID.gml</script>
+        <script>scripts\scrGetPlayerFromInstance.gml</script>
+        <script>scripts\scrShowPlayerArray.gml</script>
+        <script>scripts\scrFindFreeSpace.gml</script>
+        <script>scripts\scrDeactivateObjectsOutsideView.gml</script>
+        <script>scripts\scrShowMapContents.gml</script>
+        <script>scripts\scrGetNumPlayers.gml</script>
+      </scripts>
+      <scripts name="Setters">
+        <script>scripts\scrSetScore.gml</script>
+        <script>scripts\scrSetHealth.gml</script>
+        <script>scripts\scrSetAmmo.gml</script>
+        <script>scripts\scrIncrementScore.gml</script>
+        <script>scripts\scrDecrementHealth.gml</script>
+        <script>scripts\scrDecrementAmmo.gml</script>
+      </scripts>
+      <scripts name="Initialization">
+        <script>scripts\scrConstants.gml</script>
+        <script>scripts\scrGameConstants.gml</script>
+        <script>scripts\scrNetworkingConstants.gml</script>
+        <script>scripts\scrNetworkingGameSpecificConstants.gml</script>
+        <script>scripts\scrInitializeNetworking.gml</script>
+        <script>scripts\scrInitializeMaps.gml</script>
+        <script>scripts\scrInitializeBuffers.gml</script>
+        <script>scripts\scrInitializeSockets.gml</script>
+        <script>scripts\scrInitializeNetworkGameVariables.gml</script>
+        <script>scripts\scrInitializeGameVariables.gml</script>
+        <script>scripts\scrInitializeInputBooleans.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Networking">
+      <script>scripts\scrNetworkConnect.gml</script>
+      <scripts name="Receive Packets">
+        <script>scripts\scrProcessReceivedUDP.gml</script>
+        <script>scripts\scrProcessReceivedTCP.gml</script>
+        <script>scripts\scrConnectClient.gml</script>
+        <script>scripts\scrClientDisconnected.gml</script>
+      </scripts>
+      <scripts name="Transmit Packets">
+        <script>scripts\scrSendCreateAll.gml</script>
+        <script>scripts\scrSendServerBroadcast.gml</script>
+        <script>scripts\scrSendPlaySound.gml</script>
+        <script>scripts\scrSendPacketToSocket.gml</script>
+        <script>scripts\scrSendPacketToPlayer.gml</script>
+        <script>scripts\scrSendPacketToAll.gml</script>
+        <script>scripts\scrSendObjectUpdate.gml</script>
+        <script>scripts\scrSendPlayerUpdate.gml</script>
+        <script>scripts\scrSendKickToSocket.gml</script>
+        <script>scripts\scrSendHUD.gml</script>
+        <script>scripts\scrSendCreateObject.gml</script>
+        <script>scripts\scrSendCreateEffect.gml</script>
+        <script>scripts\scrDestroyObject.gml</script>
       </scripts>
     </scripts>
     <scripts name="Client">
       <scripts name="Events">
-        <scripts name="Create Event">
-          <script>scripts\scrClientCreateEvent.gml</script>
-          <script>scripts\scrInitializeInputBooleansClient.gml</script>
-          <script>scripts\scrInitializeNetworkingClient.gml</script>
-        </scripts>
-        <script>scripts\scrClientStepEvent.gml</script>
+        <script>scripts\scrClientCreateEvent.gml</script>
+        <script>scripts\scrClientStep.gml</script>
         <script>scripts\scrClientRoomStartEvent.gml</script>
-        <script>scripts\scrClientNetworkingEvent.gml</script>
       </scripts>
       <scripts name="Networking">
         <scripts name="Transmit Packets">
           <script>scripts\scrSendLocalInput.gml</script>
         </scripts>
-        <scripts name="Receive Packets">
-          <script>scripts\scrProcessReceivedUDPClient.gml</script>
-          <script>scripts\scrProcessReceivedTCPClient.gml</script>
-        </scripts>
       </scripts>
       <scripts name="Input">
-        <script>scripts\scrProcessInput.gml</script>
-        <script>scripts\scrInputClear.gml</script>
+        <script>scripts\scrProcessInputLocal.gml</script>
+        <script>scripts\scrInputClearLocal.gml</script>
         <script>scripts\scrProcessInputCursor.gml</script>
         <script>scripts\scrProcessInputTank.gml</script>
         <script>scripts\scrProcessInputTurret.gml</script>

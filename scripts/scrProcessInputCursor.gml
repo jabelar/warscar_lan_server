@@ -3,23 +3,23 @@
 // show_debug_message("Processing cursor input")
 
 scrSavePreviousInput()
-scrInputClear()
+scrInputClearLocal()
 
 if gamepad_axis_value(1, gp_axislv) > 0.05
 {
-    key_backward= true ;
+    global.key_backward_local = true ;
 }
 if gamepad_axis_value(1, gp_axislh) < -0.05
 {
-    key_left= true ;
+    global.key_left_local = true ;
 }
 if gamepad_axis_value(1, gp_axislh) > 0.05
 {
-    key_right= true ;
+    global.key_right_local = true ;
 }        
 if gamepad_axis_value(1, gp_axislv) < -0.05
 {
-    key_forward= true ;
+    global.key_forward_local = true ;
 }
 
 scrProcessInputTriggers()

@@ -7,12 +7,12 @@ if joy_distance > 0.1
 {
     if ang_diff < 0 - TANK_TURN_SPEED_BASE*TANK_TURRET_SPEED_MULTIPLIER
     {
-        key_turret_right = true
-        key_turret_left = false
+        global.key_turret_right_local = true
+        global.key_turret_left_local = false
     }
     if ang_diff > TANK_TURN_SPEED_BASE*TANK_TURRET_SPEED_MULTIPLIER
     {
-        key_turret_right = false
-        key_turret_left = true
+        global.key_turret_right_local = false
+        global.key_turret_left_local = true
     }
 }   
