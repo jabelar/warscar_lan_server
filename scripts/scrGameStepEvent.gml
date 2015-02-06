@@ -31,4 +31,3 @@ with objProjectileShell
 }    
 
 scrSendHUD()
-

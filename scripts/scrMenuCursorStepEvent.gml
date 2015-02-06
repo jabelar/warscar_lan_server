@@ -2,7 +2,6 @@
 
 var button_id ;
 
-scrProcessInputCursor()
 // note that the input processed will only affect below after received input packet locally
 
 if global.key_forward[0] then y -= 16

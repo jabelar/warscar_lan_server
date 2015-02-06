@@ -1,18 +1,18 @@
 /// scrSendLocalInput()
 
-buffer_seek(global.tx_buff_local_client, buffer_seek_start, 0)
-buffer_write(global.tx_buff_local_client, buffer_u8, NF_INPUT) // send input
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_forward_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_backward_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_right_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_left_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_turret_right_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_turret_left_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_flag_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_weapon1_pressed_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_weapon2_pressed_local)
-buffer_write(global.tx_buff_local_client, buffer_bool, global.key_weapon3_pressed_local)
+buffer_seek(tx_buff_client, buffer_seek_start, 0)
+buffer_write(tx_buff_client, buffer_u8, NF_INPUT) // send input
+buffer_write(tx_buff_client, buffer_bool, key_forward)
+buffer_write(tx_buff_client, buffer_bool, key_backward)
+buffer_write(tx_buff_client, buffer_bool, key_right)
+buffer_write(tx_buff_client, buffer_bool, key_left)
+buffer_write(tx_buff_client, buffer_bool, key_turret_right)
+buffer_write(tx_buff_client, buffer_bool, key_turret_left)
+buffer_write(tx_buff_client, buffer_bool, key_flag)
+buffer_write(tx_buff_client, buffer_bool, key_weapon1_pressed)
+buffer_write(tx_buff_client, buffer_bool, key_weapon2_pressed)
+buffer_write(tx_buff_client, buffer_bool, key_weapon3_pressed)
 
-network_send_packet( global.socket_local_client_side, global.tx_buff_local_client, buffer_tell(global.tx_buff_local_client) )
+network_send_packet( socket_client, tx_buff_client, buffer_tell(tx_buff_client) )
 
-// show_debug_message("Sending player input packet with key_forward = "+string(global.key_forward_local)+" and key_right = "+string(global.key_right_local))
+// show_debug_message("Sending player input packet with key_forward = "+string(key_forward)+" and key_right = "+string(key_right))

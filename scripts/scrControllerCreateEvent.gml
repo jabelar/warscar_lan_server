@@ -6,6 +6,6 @@ scrConstants()
 scrInitializeNetworkGameVariables()
 scrInitializeNetworking()
 scrInitializeGameVariables() 
-scrInitializeInputBooleans()
+scrInitializeInputBooleansServer()
 
 show_debug_message("scrControllerCreateEvent finished")
