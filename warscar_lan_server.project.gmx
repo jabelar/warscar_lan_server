@@ -186,6 +186,7 @@
         <script>scripts\scrIncrementHealth.gml</script>
         <script>scripts\scrDecrementAmmo.gml</script>
         <script>scripts\scrIncrementAmmo.gml</script>
+        <script>scripts\scrSetMessage.gml</script>
       </scripts>
     </scripts>
     <scripts name="Networking">

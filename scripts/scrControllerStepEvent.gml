@@ -20,6 +20,17 @@ switch room
 
 scrDeactivateObjectsOutsideView() 
 
+// check if it is time to erase message
+if global.message_string != ""
+{
+    global.message_timer--
+    if global.message_timer < 0
+    {
+        global.message_string = ""
+        scrSendHUD()
+    }
+}
+
 // check if it is time to send out a server broadcast
 global.broadcast_alarm--
 if global.broadcast_alarm < 0
