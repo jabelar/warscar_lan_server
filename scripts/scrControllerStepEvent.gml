@@ -21,6 +21,18 @@ switch room
 scrDeactivateObjectsOutsideView() 
 
 // check if it is time to erase message
+if global.restart_timer >= 0
+{
+    global.restart_timer--
+    if global.restart_timer < 0
+    {
+        scrSendRestart()
+        game_restart()
+    }
+}
+
+
+// check if it is time to erase message
 if global.message_string != ""
 {
     global.message_timer--

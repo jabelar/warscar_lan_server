@@ -3,15 +3,13 @@
 // check for game end conditions
 if global.player_score[0] >= global.points_to_win
 {
-    show_message("Player 1 Wins!")
-    scrSendRestart()
-    game_restart()
+    scrSetMessage("Player 1 wins!")
+    global.restart_timer = 3 * room_speed
 }
 if global.player_score[1] >= global.points_to_win
 {
-    show_message("Player 2 Wins!")
-    scrSendRestart()
-    game_restart()
+    scrSetMessage("Player 2 Wins!")
+    global.restart_timer = 3 * room_speed
 }
 
 with objPlayer1 
