@@ -11,6 +11,7 @@ NF_SOUND_PLAY = 3
 NF_EFFECT_CREATE = 4
 NF_KICK = 5
 NF_HUD = 6
+NF_RESTART = 7
 
 // broaccast packet types
 globalvar NF_SERVER_ANNOUNCE, NF_CLIENT_ANNOUNCE;

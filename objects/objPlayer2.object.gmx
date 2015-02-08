@@ -117,7 +117,7 @@ scrPlayerCreateEvent()
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>&lt;undefined&gt;</script>
+            <script>-1</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -183,7 +183,7 @@ scrPlayerCreateEvent()
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>&lt;undefined&gt;</script>
+            <script>-1</script>
           </argument>
           <argument>
             <kind>0</kind>

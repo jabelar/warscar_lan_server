@@ -3,16 +3,16 @@
 var joy_direction = point_direction(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
 var joy_distance = point_distance(0, 0, gamepad_axis_value(1, gp_axislh), gamepad_axis_value(1, gp_axislv));
 var ang_diff = angle_difference(joy_direction, image_angle)
-
-// show_debug_message("Angle difference is "+string(ang_diff))
     
 if joy_distance > 0.1
 {
-    if abs(ang_diff) < TANK_TURN_SPEED_BASE
+    show_debug_message("Joystick direction is "+string(joy_direction)+" and angle diff is "+string(ang_diff))
+    
+    if abs(ang_diff) <= TANK_TURN_SPEED_BASE
     {
         global.key_forward_local = true ;
     }
-    else if abs(ang_diff) > (180 - TANK_TURN_SPEED_BASE * 9)
+    else if abs(ang_diff) >= (180 - TANK_TURN_SPEED_BASE * 9)
     {
         global.key_backward_local = true ;
     }

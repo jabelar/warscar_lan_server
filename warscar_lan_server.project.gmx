@@ -15,7 +15,6 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="Tank Bodies">
-      <sprite>sprites\sprTankBody1</sprite>
       <sprite>sprites\sprHuskyRed</sprite>
       <sprite>sprites\sprHuskyBlue</sprite>
     </sprites>
@@ -212,6 +211,7 @@
         <script>scripts\scrSendPlayerUpdate.gml</script>
         <script>scripts\scrSendLocalInput.gml</script>
         <script>scripts\scrSendKickToSocket.gml</script>
+        <script>scripts\scrSendRestart.gml</script>
         <script>scripts\scrSendHUD.gml</script>
         <script>scripts\scrSendCreateObject.gml</script>
         <script>scripts\scrSendCreateEffect.gml</script>

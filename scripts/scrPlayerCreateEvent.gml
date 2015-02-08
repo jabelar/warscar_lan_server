@@ -28,6 +28,12 @@ my_turn_speed = TANK_TURN_SPEED_BASE
 current_speed = my_speed
 current_turn_speed = my_turn_speed
 
+global.player_health[current_player] = HEALTH_BASE
+global.player_ammo[current_player] = 10
+global.player_hurt_timer[current_player] = -1
+global.player_color[current_player] = make_color_hsv(irandom(255), 255, 255)
+scrSendHUD()
+
 state = NORMAL
 
 // offsets to ensure weapons launch from correct part
