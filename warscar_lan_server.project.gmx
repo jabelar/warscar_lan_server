@@ -27,8 +27,6 @@
       <sprite>sprites\sprProjectileShell</sprite>
     </sprites>
     <sprites name="Obstacles">
-      <sprite>sprites\sprObstacleWall1</sprite>
-      <sprite>sprites\sprTower</sprite>
       <sprites name="WaterDeep">
         <sprite>sprites\sprBigLake2Left</sprite>
         <sprite>sprites\sprBigLake2Right</sprite>
@@ -58,8 +56,6 @@
       </sprites>
     </sprites>
     <sprites name="Flags">
-      <sprite>sprites\sprFlagRed</sprite>
-      <sprite>sprites\sprFlagBlue</sprite>
       <sprite>sprites\sprFlagAnimRed</sprite>
       <sprite>sprites\sprFlagAnimBlue</sprite>
     </sprites>
@@ -220,8 +216,8 @@
     </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fontMilitary</font>
     <font>fonts\fontMilitaryStencil</font>
+    <font>fonts\fontMessage</font>
   </fonts>
   <objects name="objects">
     <objects name="Parents">

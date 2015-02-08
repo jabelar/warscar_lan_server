@@ -50,6 +50,16 @@ switch state
         audio_play_sound_at(sndExplosion, x, y, 0, room_width*1.5, room_width*2, 1, false, 100)
         scrSendPlaySound(SOUND_EXPLOSION, x, y)
         
+        // abandon flags
+        with objParentFlag
+        {
+            if carrier == other.id
+            {
+                carrier = noone
+                state = FLAG_ABANDONED
+            }
+        }
+        
         // respawn player
         x = xstart
         y = ystart

@@ -9,6 +9,7 @@ for (var i=0; i<global.max_num_players; i++)
     buffer_write(global.tx_buff_server, buffer_u32, global.player_score[i])
     buffer_write(global.tx_buff_server, buffer_u32, global.player_health[i])
     buffer_write(global.tx_buff_server, buffer_u32, global.player_ammo[i])
+    buffer_write(global.tx_buff_server, buffer_string, global.message_string)
 }
 
 // show_debug_message("Sending HUD packet to all clients")
